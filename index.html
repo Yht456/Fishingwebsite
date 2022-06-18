@@ -304,7 +304,7 @@
 			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
 			            }
 				}
-				ScreenOrientation.onchange = function(){
+				screen.orientation.onchange = function(){
 					console.log('screenChanged');
 					if(screen.orientation.angle == 0 || screen.orientation.angle == 180){
 						console.log(screen.orientation.angle);
@@ -369,6 +369,7 @@
 			document.querySelector('.overlayMenuBar').classList.add('openOverlay');
 			document.querySelector('.bottomNav').classList.add('openBarMobile');
 		}
+	}
 	</script>
 </body>
 </html>

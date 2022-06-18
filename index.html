@@ -305,11 +305,14 @@
 			            }
 				}
 				ScreenOrientation.onchange = function(){
+					console.log('screenChanged');
 					if(screen.orientation.angle == 0 || screen.orientation.angle == 180){
+						console.log(screen.orientation.angle);
 					     for(let i = 0; i < iframe.length;i++){
 			                Object.assign(iframe[i].style,{top:'0',height:'100vh'})
 			             }	
 					}else{
+						console.log(screen.orientation.angle);
 						for(let i = 0; i < iframe.length;i++){
 			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
 			            }

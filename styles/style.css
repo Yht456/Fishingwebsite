@@ -797,6 +797,11 @@ footer .footerBottom a{
 	color: white;
 }
 /*MEDIA QUERIES*/
+@media screen and (max-height: 500px){
+	.heroPoster{
+		min-height: 700px;
+	}
+}
 @media screen and (min-width: 1700px){
 	.teamSec .carousel-cell img{
 		height: 27vw;

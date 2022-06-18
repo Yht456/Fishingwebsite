@@ -320,14 +320,19 @@
 			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
 			    }
 			}
-			window.onresize = function(){
-				if(oldHeight < window.innerHeight){
-					heroPoster.style.height = window.innerHeight + 'px';
-					oldHeight = window.innerHeight;
-				}else{
-					heroPoster.style.height = oldHeight + 'px';
-				}
-			}
+			window.onresize = function(e){
+				if(done == true){
+				    if(oldHeight < window.innerHeight){
+					    heroPoster.style.height = window.innerHeight + 'px';
+					    oldHeight = window.innerHeight;
+				    }else{
+					    heroPoster.style.height = oldHeight + 'px';
+				    }
+			    }else{
+			    	e.preventDefault();
+			    	done = true;
+			    }
+		    }
 		}
 		function hoverImgPlay(img){
 			'use strict';
@@ -351,6 +356,7 @@
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';
+					done = false;
 					heroPoster.style.height = beforePosterHeight;
 					r = 0;
 				}

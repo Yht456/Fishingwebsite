@@ -310,12 +310,11 @@
 			                Object.assign(iframe[i].style,{top:'0',height:'100vh'})
 			             }	
 					}else{
-						console.log(screen.orientation.angle);
 						for(let i = 0; i < iframe.length;i++){
 			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
 			            }
 					}
-				};
+				}
 
 			}else{
 				for(let i = 0; i < iframe.length;i++){
@@ -330,6 +329,7 @@
 					heroPoster.style.height = oldHeight + 'px';
 				}
 			}
+		}
 		function hoverImgPlay(img){
 			'use strict';
 			img.style.transform = 'scale(1.1)';
@@ -367,7 +367,6 @@
 			document.querySelector('.overlayMenuBar').classList.add('openOverlay');
 			document.querySelector('.bottomNav').classList.add('openBarMobile');
 		}
-	}
 	</script>
 </body>
 </html>

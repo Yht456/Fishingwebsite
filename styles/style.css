@@ -89,8 +89,8 @@ iframe#youtube_hero_api{
 .flickity-prev-next-button.previous .flickity-button-icon{
 	left: 4.8vw !important;
 }
-.vjs-youtube, .vjs-poster{
-background-size:contain;
+.vjs-poster{
+background-size:contain !important;
 }
 .vjs-control-bar{
 	background-color: rgba(43,51,63,1) !important;

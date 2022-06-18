@@ -828,13 +828,13 @@ footer .footerBottom a{
 }
 @media screen and (max-width: 1000px){
 	.topSection .smallTitle{
-		font-size: 2.5vw;
+		font-size: 2vw;
 	}
 	.video .textVideo h1{
-		font-size: 7vw;
+		font-size: 5vw;
 	}
 	.topSection .smallDesc{
-		font-size: 3vw;
+		font-size: 2vw;
 	}
 	.topSection nav .bottomNav{
 		margin: 2% 20%;

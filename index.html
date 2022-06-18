@@ -293,13 +293,13 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			let iframe = document.querySelectorAll('iframe');
-			if(window.innerWidth < 1000){
+			if(window.innerWidth < 1000 & window.innerWidth > 700){
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{position:'abolsute',transform:'scale(1.2)'})
 			      }
 				if(screen.orientation.angle == 90 || screen.orientation.angle == 270){
 					    for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-9vh',height:'120vh'})
+			                Object.assign(iframe[i].style,{top:'-9vh',height:'117vh'})
 			            }
 				}
 				screen.orientation.onchange = function(){
@@ -313,7 +313,12 @@
 			            }
 					}
 				}
-			}else{
+			} else if(window.innerWidth < 700){
+				for(let i = 0; i < iframe.length;i++){
+			                Object.assign(iframe[i].style,{top:'-10vh',height:'121vh'})
+			            }
+			}
+			else{
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
 			    }

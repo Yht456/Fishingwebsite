@@ -90,7 +90,7 @@ iframe#youtube_hero_api{
 	left: 4.8vw !important;
 }
 .vjs-youtube .vjs-poster{
-background-image:contain;
+background-size:contain;
 }
 .borderBottomHoverAnim{
 	position: relative;

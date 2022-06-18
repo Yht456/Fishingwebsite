@@ -293,13 +293,13 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			let iframe = document.querySelectorAll('iframe');
-			if(window.innerWidth < 900){
+			if(window.innerWidth < 1000){
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{position:'abolsute',transform:'scale(1.2)'})
 			      }
 				if(screen.orientation.angle == 90 || screen.orientation.angle == 270){
 					    for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-9vh',height:'137vh'})
+			                Object.assign(iframe[i].style,{top:'-9vh',height:'120vh'})
 			            }
 				}
 				screen.orientation.onchange = function(){

@@ -1054,14 +1054,17 @@ footer .footerBottom a{
 		font-size: 4vw;
 	}
 	.flickity-prev-next-button{
-		height: 8vw;
-		width: 10vw;
+		height: 10vw;
+		width: 12vw;
 	}
 	.flickity-button-icon{
 		width: 20% !important;
 	}
 	.flickity-prev-next-button.next .flickity-button-icon{
 		left: 5vw !important;
+	}
+	.flickity-prev-next-button.previous .flickity-button-icon{
+		left: 6vw !important;
 	}
 	.videoSec .poster, .videoSec .video{
 		height: 300px;

@@ -89,7 +89,7 @@ iframe#youtube_hero_api{
 .flickity-prev-next-button.previous .flickity-button-icon{
 	left: 4.8vw !important;
 }
-.vjs-youtube .vjs-poster{
+.vjs-youtube, .vjs-poster{
 background-size:contain;
 }
 .borderBottomHoverAnim{

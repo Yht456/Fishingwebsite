@@ -293,11 +293,14 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			let iframe = document.querySelectorAll('iframe');
-			for(let i = 0; i < iframe.length;i++){
-		    iframe[i].style.position = 'absolute !important';
-			iframe[i].style.top = '-10vh';
-			iframe[i].style.height = '140vh';
-			iframe[i].style.transform = 'scale(1.18)';
+			if(window.innerWidth < 800){
+				for(let i = 0; i < iframe.length;i++){
+			        Object.assign(iframe[i].style,{position:'abolsute',top:'-10vh',height:'140vh',transform:'scale(1.2)'})
+			    }
+			}else{
+				for(let i = 0; i < iframe.length;i++){
+			        Object.assign(iframe[i].style,{position:'abolsute',top:'-10vh',height:'129vh',transform:'scale(1.1)'})
+			    }
 			}
 			if(window.innerWidth < 800){
 				let oldHeight = window.innerHeight;

@@ -92,6 +92,9 @@ iframe#youtube_hero_api{
 .vjs-youtube, .vjs-poster{
 background-size:contain;
 }
+.vjs-control-bar{
+	background-color: rgba(43,51,63,1);
+}
 .borderBottomHoverAnim{
 	position: relative;
 	display: inline-block;

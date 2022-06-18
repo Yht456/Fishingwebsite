@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a fishing website">
+	<meta name="keywords" content="fishing, sea, gear, ocean, hunting">
+	<link rel="stylesheet" type="text/css" href="styles/flickity.min.css">
+	<link rel="stylesheet" href="styles/video-js.min.css" />
+	<link href="styles/style.css" rel="stylesheet" />
+	<title>Fishing Website</title>
+</head>
+<body>
+	<section class="topSection">
+		<nav>
+			<div class="topNav">
+				<p><img alt="" src="icons/locationIcon.png" class="locationNavBarIcon">Distributor Locations</p>
+				<img alt="" class="logo" src="assets/LOGO.png">
+				<p>
+					<button class="barMenu disabled" onclick="openNav()">
+						<svg xmlns="http://www.w3.org/2000/svg" width="67.727" viewBox="0 0 67.727 59.261"><path id="Icon_awesome-bars" data-name="Icon awesome-bars" d="M2.419,15.1H65.308a2.419,2.419,0,0,0,2.419-2.419V6.638a2.419,2.419,0,0,0-2.419-2.419H2.419A2.419,2.419,0,0,0,0,6.638v6.047A2.419,2.419,0,0,0,2.419,15.1Zm0,24.188H65.308a2.419,2.419,0,0,0,2.419-2.419V30.826a2.419,2.419,0,0,0-2.419-2.419H2.419A2.419,2.419,0,0,0,0,30.826v6.047A2.419,2.419,0,0,0,2.419,39.292Zm0,24.188H65.308a2.419,2.419,0,0,0,2.419-2.419V55.014A2.419,2.419,0,0,0,65.308,52.6H2.419A2.419,2.419,0,0,0,0,55.014v6.047A2.419,2.419,0,0,0,2.419,63.48Z" transform="translate(0 -4.219)"/></svg>
+					</button>
+					<a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M230.4,25.6v25.6c49.6,0,94.2,20,126.7,52.5c32.5,32.5,52.5,77.1,52.5,126.7c0,49.6-20,94.2-52.5,126.7c-32.5,32.5-77.1,52.5-126.7,52.5c-49.6,0-94.2-20-126.7-52.5C71.2,324.6,51.2,280,51.2,230.4c0-49.6,20-94.2,52.5-126.7c32.5-32.5,77.1-52.5,126.7-52.5V25.6V0C103.1,0,0,103.1,0,230.4c0,127.3,103.1,230.4,230.4,230.4c127.3,0,230.4-103.1,230.4-230.4C460.8,103.1,357.7,0,230.4,0V25.6z"/><path d="M504.5,468.3L393.1,356.9c-10-10-26.2-10-36.2,0c-10,10-10,26.2,0,36.2l111.4,111.4c10,10,26.2,10,36.2,0C514.5,494.5,514.5,478.3,504.5,468.3"/></g></svg></a>
+					<a href="#"><img alt="" src="icons/globe-grid-svgrepo-com.png"></a>
+				</p>
+			</div>
+			<div class="overlayMenuBar softAnimation" onclick="removeNav()"></div>
+			<ul class="bottomNav softAnimation">
+				<li><a href="#">hooks</a><button class="xMark softAnimation" onclick="removeNav()"><svg ;xmlns="http://www.w3.org/2000/svg" width="82.763" viewBox="0 0 82.763 82.741"><path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M62.473,52.659,92.033,23.1a6.926,6.926,0,1,0-9.8-9.8l-29.56,29.56L23.118,13.3a6.926,6.926,0,1,0-9.8,9.8l29.56,29.56-29.56,29.56a6.926,6.926,0,0,0,9.8,9.8l29.56-29.56,29.56,29.56a6.926,6.926,0,0,0,9.8-9.8Z" transform="translate(-11.285 -11.289)"/></svg></button></li>
+				<li><a href="#">apparel</a></li>
+				<li><a href="#">accessories</a></li>
+				<li><a href="#">brand</a></li>
+				<li><a href="#">atheltes</a></li>
+				<li><a href="#">stories</a></li>
+			</ul>
+		</nav>
+		<div class="video">
+		    <div class="poster heroPoster">
+		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg softAnimation">
+		    </div>
+		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
+                 <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" />
+            </video>
+		    <div class="textVideo">
+		    	<p class="smallTitle greyTitle">feature film</p>
+		    	<h1 class="bigTitle">Meet BlackBay Lodge</h1>
+		    	<p class="smallDesc">Pike fishing in Brazil featuring our cutting-edge fishing hooks.</p>
+		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))" onclick="playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'))"><img alt="" src="icons/play-button.png"></button>
+		    </div>
+	    </div>
+
+		<!-- Rotate it --><hr class="lineTopSection">
+	</section>
+	<section class="catchingProductsGallery">
+		<p class="sectionTitle initial">Ready to make that catch?</p>
+		<div class="gallery">
+		    <div class="row firstRow">
+			    <div class="imgCatch">
+			    	<div class="overlay"></div>
+				    <img alt="" src="assets/Bait-hook-Carp-Continental-R-734x734.jpg">
+				    <p class="title">Bait Hooks</p>
+			    </div>
+			    <div class="imgCatch">
+			    	<div class="overlay"></div>
+				    <img alt="" src="assets/Accessories-hp.jpg">
+				    <p class="title">Accessories</p>
+			    </div>
+		    </div>
+		    <div class="row secondRow">
+			    <div class="imgCatch">
+			    	<div class="overlay"></div>
+				    <img alt="" src="assets/hooks-ig.jpg">
+				    <p class="title">Lure Hooks</p>
+			    </div>
+			    <div class="imgCatch">
+			    	<div class="overlay"></div>
+				    <img alt="" src="assets/Apparel-2-hp.jpg">
+				    <p class="title">Apparel</p>
+			    </div>
+		    </div>
+		</div>
+	</section>
+	<section class="gearSection">
+		<p class="sectionTitle">Latest Gear</p>
+		<div class="carousel" data-flickity='{"groupCells":"true","freeScroll":"true","wrapAround":"true","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}, "cellAlign": "left"}'>
+			<div class="carousel-cell">
+                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<img alt="Gear product" src="assets/Viper-41_ccexpress.jpg">
+				<p>Product 101</p>
+			</div>
+			<div class="carousel-cell">
+                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<img alt="Gear product" src="assets/Titan-Diver-1-1_ccexpress.jpg">
+				<p>Product 101</p>
+			</div>
+			<div class="carousel-cell">
+                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<img alt="Gear product" src="assets/Viper-41_ccexpress.jpg">
+				<p>Product 101</p>
+			</div>
+			<div class="carousel-cell">
+                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<img alt="Gear product" src="assets/Titan-Diver-1-1_ccexpress.jpg">
+				<p>Product 101</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="videoSec">
+		<p class="sectionTitle">Bigger, Stronger, Sharper</p>
+		<div class="video">
+			<div class="poster softAnimation"></div>
+		    <video controls data-setup='{}' id="techVideo" class="video-js">
+			    <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?modestbranding=1&showinfo=0&enablejsapi=1" type="video/youtube" /> 
+		    </video>
+		    <div class="textVideo">
+		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))" onclick="playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'))"><img alt="" src="icons/play-button.png">
+		    	</button>
+		    </div>
+	    </div>
+	</section>
+	<section class="teamSec">
+		<p class="sectionTitle initial">Learn from the team</p>
+		<div class="teamContent">
+			<div class="contentText">
+				<p class="title">catch more</p>
+				<p class="desc">Discover techniques and guides from our dedicated family of world-wide fishing team.</p>
+				<p>The gear in action.</p>
+				<a href="#" class="zoomAnimationLink">start reading</a>
+				<a href="#" class="zoomAnimationLink">join our team</a>
+			</div>
+			<div class="carousel" data-flickity='{"groupCells":"true","freeScroll":"true","cellAlign":"left","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}}'>
+			<div class="carousel-cell" style="">
+				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/pro-1-wse2.jpg"></div>
+				<p>Name of Fisherman</p>
+				<p class="nationlity">Italy</p>
+			</div>
+			<div class="carousel-cell" style="">
+				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Christian_pro2.jpg"></div>
+				<p>Name of Fisherman</p>
+				<p class="nationlity">U.S.A</p>
+			</div>
+			<div class="carousel-cell" style="">
+				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
+				<p>Name of Fisherman</p>
+				<p class="nationlity">Dutch</p>
+			</div>
+			<div class="carousel-cell" style="">
+				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
+				<p>Name of Fisherman</p>
+				<p class="nationlity">U.S.A</p>
+			</div>
+			<div class="carousel-cell" style="">
+				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
+				<p>Name of Fisherman</p>
+				<p class="nationlity">Dutch</p>
+			</div>
+		</div>
+		</div>
+	</section>
+	<section class="socialMediaContent">
+		<p class="sectionTitle"><a href="#" class="zoomAnimationLink">follow us</a> <span class="initial">on</span> instagram</p>
+		<div class="gallerySocialMedia pcVersion">
+			<div class="row">
+				<div><img alt="" src="assets/ig-top1.jpg"></div>
+				<div><img alt="" src="assets/ig-2-img.jpg"></div>
+				<div><img alt="" src="assets/ig-3-img.jpg"></div>
+				<div><img alt="" src="assets/ig-4-img.jpg"></div>
+			</div>
+			<div class="row">
+				<div><img alt="" src="assets/ig-bt1.jpg"></div>
+				<div><img alt="" src="assets/ig-5-img.jpg"></div>
+				<div><img alt="" src="assets/ig-6-img.jpg"></div>
+				<div><img alt="" src="assets/ig-7-img.jpg"></div>
+			</div>
+		</div>
+		<div class="mobileVersion carousel" data-flickity='{"wrapAround":"true","freeScroll":"true","cellAlign":"left","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}}'>
+			<div class="carousel-cell">
+				<img alt="an angler is holding a big fish" src="assets/ig-top1.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="Gear product" src="assets/ig-2-img.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="an angler is holding a big fish" src="assets/ig-4-img.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="an angler is holding a big fish" src="assets/ig-3-img.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="Gear product" src="assets/ig-bt1.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="an angler is holding a big fish" src="assets/ig-5-img.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="an angler is holding a big fish" src="assets/ig-6-img.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img alt="an angler is holding a big fish" src="assets/ig-7-img.jpg">
+			</div>
+		</div>
+	</section>
+	<footer>
+		<hr>
+		<p class="footerTitle">Become an official Distributor</p>
+		<hr class="belowLineTitle">	
+		<div class="footerContent">
+			<div class="aboutCompanyContainer">
+				<p class="titleCompany greyTitle smallSize">the company</p>
+				<p class="desc">Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to a book.</p>
+				<p class="dashText">Lorem, ipsum, all over here.<br>#loremipsum</p>
+			</div>
+			<div class="aboutProductContainer">
+				<p class="greyTitle aboutProductTitle smallSize">Products</p>
+				<div class="productCategories">
+					<div class="rowOne" style="">
+						<ul>
+							<li class="titleList">Product cat1</li>
+							<li><a href="#">Product cat name1111</a></li>
+							<li><a href="#">Product cat name1111</a></li>
+							<li><a href="#">Product cat name1111</a></li>
+						</ul>
+							<p style="margin:0;">product category 2</p>
+					</div>
+					<div class="rowTwo">
+						<ul>
+							<li class="titleList">Product category 2</li>
+							<li><a href="#">Product cat name333</a></li>
+							<li><a href="#">Product cat name333</a></li>
+							<li><a href="#">Product cat name333</a></li>
+							<li><a href="#">Product cat name333</a></li>
+							<li><a href="#">Product cat name333</a></li>
+					    </ul>
+						    <p style="margin: 0;">Apparel</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="socialMediaMenuLists">
+			<div class="generalInfo">
+				<div class="location">
+					    <img alt="" src="icons/locationIcon.png" class="locationFooterIcon">
+					    <div class="selectContainer">
+						    <p class="selectLabel smallSize greyTitle">country</p>
+						    <select>
+							    <option>International (EN)</option>
+							    <option>USA</option>
+							    <option>Australia</option>
+						    </select>
+					    </div>
+				    </div>
+				    <div class="socialMediaLinks">
+					    <p><a href="#" class="borderBottomHoverAnim">Instagram</a></p>
+					    <p><a href="#" class="borderBottomHoverAnim">Facebook</a></p>
+					    <p><a href="#" class="borderBottomHoverAnim">Youtube</a></p>
+				    </div>
+            </div>
+				    <div class="menuLists">
+					<div class="menuItemcColumnOne menuItem">
+						        <p class="greyTitle smallSize">our world</p>
+						        <ul style="margin:0">
+							        <li><a href="#">Menu Item 123</a></li>
+							        <li><a href="#">Menu Item 123</a></li>
+							        <li><a href="#">Menu Item 123</a></li>
+							        <li><a href="#">Menu Item 123</a></li>
+							        <li><a href="#">Menu Item 123</a></li>
+						        </ul>
+					    </div>
+					    <div class="menuItemColumnTwo menuItem">
+						        <p class="greyTitle smallSize">our world</p>
+						        <ul>
+							        <li><a href="#">Menu Item 123</a></li>
+							        <li><a href="#">Menu Item 123</a></li>
+							        <li><a href="#">Menu Item 123</a></li>
+						        </ul>
+					        </div>
+				</div>
+			</div>
+		<div class="footerBottom">
+			<ul class="contactPriv">
+				<li><a href="" class="email">info@website.com</a></li>
+				<li><a href="">Terms</a></li>
+				<li><a href="">Privacy</a></li>
+			</ul>
+			<p class="copyRight">&copy;2022 our company</p>
+		</div>
+		<hr>
+	</footer>
+	<script type="text/javascript" src="scripts/flickity.pkgd.min.js"></script>
+	<script src="scripts/video-js.min.js"></script>
+	<script src="scripts/youtube.min.js"></script>
+	<script type="text/javascript">
+		let heroPoster = document.querySelector('.heroPoster'),
+		    oldHeight = window.innerHeight;
+		window.onresize = () => {
+			if(oldHeight > window.innerHeight){
+				heroPoster.style.height = oldHeight + 'px';
+			}else{
+				oldHeight = window.innerHeight;
+			}
+		}
+		window.onload = function(){
+			let iframe = document.querySelectorAll('iframe');
+			for(let i = 0; i < iframe.length;i++){
+		    iframe[i].style.position = 'absolute !important';
+			iframe[i].style.top = '-15vh';
+			iframe[i].style.height = '126vh';
+			iframe[i].style.transform = 'scale(1.15)';
+			}
+		}
+		function hoverImgPlay(img){
+			'use strict';
+			img.style.transform = 'scale(1.1)';
+		}
+		function leaveImgPlay(img){
+			'use strict';
+			img.style.transform = 'scale(1)';
+		}
+        function playVideos(video, player){ //YOUTUBE
+			'use strict';
+			let parent = video.parentElement.parentElement;
+			parent.querySelector('.vjs-fullscreen-control').click()
+			parent.style.display = 'block';
+			parent.style.position ='absolute'
+			player.play();
+			
+			let r = 0;
+			document.addEventListener('fullscreenchange',function(e){
+				r++;
+				console.log(r);
+				if(r >= 2){
+					player.pause();
+					parent.style.display = 'none';
+					r = 0;
+				}
+			})
+			player.on('ended',function(){player.play()});
+		}
+		function removeNav(){
+			'use strict';
+			document.querySelector('.overlayMenuBar').classList.remove('openOverlay');
+			document.querySelector('.bottomNav').classList.remove('openBarMobile');
+		}
+		function openNav(){
+			'use strict';
+			document.querySelector('.overlayMenuBar').classList.add('openOverlay');
+			document.querySelector('.bottomNav').classList.add('openBarMobile');
+		}
+	</script>
+</body>
+</html>

@@ -720,7 +720,7 @@ footer .socialMediaMenuLists{
 	display: flex;
 	position: relative;
 	margin-bottom: 3vw;
-	margin-top: 3vw;
+	margin-top: 0;
 }
 .socialMediaMenuLists .generalInfo{
 	display: flex;

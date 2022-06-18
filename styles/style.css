@@ -64,16 +64,16 @@ iframe#youtube_hero_api{
 }
 .flickity-prev-next-button{
 	width: 8.5vw;
-        height: 5.3vw;
-        border-radius: 0;
-        background: var(--greyTheme);
-        box-shadow: 0 0 21px -9px #636363;
+  height: 5.3vw;
+  border-radius: 0;
+  background: var(--greyTheme);
+  box-shadow: 0 0 21px -9px #636363;
 }
 .flickity-button-icon {
-        fill: black;
-        width: 10% !important;
-        left: 50% !important;
-        transform: translateX(-50%);
+  fill: black;
+  width: 10% !important;
+  left: 50% !important;
+  transform: translateX(-50%);
 }
 .flickity-prev-next-button.previous{
 	left: -7vw;
@@ -90,7 +90,7 @@ iframe#youtube_hero_api{
 	left: 4.8vw !important;
 }
 .vjs-poster{
-        background-size:contain !important;
+  background-size:contain !important;
 }
 .vjs-control-bar{
 	background-color: rgba(43,51,63,1) !important;
@@ -197,10 +197,10 @@ section:not(:first-child){
 }
 .overlayMenuBar{
 	background: rgba(0,0,0,0.5);
-         width: 0;
-         height: 100%;
-         position: fixed;
-         top: 0;
+   width: 0;
+   height: 100%;
+   position: fixed;
+   top: 0;
 }
 .topNav .barMenu{
 	background: none;
@@ -209,10 +209,10 @@ section:not(:first-child){
 }
 .topNav .line{
 	width: 20px;
-        height: 2px;
-        border-radius: 3vw;
-        background: white;
-        margin-bottom: 3.6px;
+  height: 2px;
+  border-radius: 3vw;
+  background: white;
+  margin-bottom: 3.6px;
 }
 .topNav .barMenu svg{
 	width: 3vw;
@@ -237,11 +237,11 @@ section:not(:first-child){
 }
 .bottomNav li .xMark{
 	display: none;
-        cursor: pointer;;
-        position: relative;
-        left: 16vw;
-        border: none;
-        background: none;
+  cursor: pointer;;
+  position: relative;
+  left: 16vw;
+  border: none;
+  background: none;
 }
 .xMark svg{
 	width: 3.5vw !important;
@@ -288,28 +288,25 @@ footer ul li a:hover::after{
 	min-height: 500px;
 	height: 100vh;
 }
-.video-js .vjs-big-play-button, .video-js .vjs-picture-in-picture-control{
-	display: none;
-}
-.video .video-js{
+.video-js .vjs-big-play-button, .video-js .vjs-picture-in-picture-control, .video .video-js, .video-js .vjs-loading-spinner{
 	display: none;
 }
 .topSection .video .textVideo{
 	text-align: center;
-        color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        position: absolute;
-        font-size: 1.2vw;
-        width: 80%;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  font-size: 1.2vw;
+  width: 80%;
 }
 .textVideo .smallDesc{
 	font-size: 1.6vw;
-        letter-spacing: 1px;
-        text-transform: initial;
-        margin-top: 0;
-        margin-bottom: 0;
+  letter-spacing: 1px;
+  text-transform: initial;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .textVideo button{
 	background: none;
@@ -331,9 +328,9 @@ div.video .poster img{
 	margin-bottom: 9px;
 }
 .video .textVideo h1{
-	  font-size: 4.167vw;
-          margin-top: 0;
-          font-family: circularStdBold, sans-serif;
+	font-size: 4.167vw;
+  margin-top: 0;
+  font-family: circularStdBold, sans-serif;
 }
 .video .textVideo p:last-child{
 	font-size: 1.5vw;
@@ -345,16 +342,16 @@ div.video .poster img{
 
 .lineTopSection{
 	transform: rotate(90deg);
-        background: white;
-        border: 1px solid white;
-        width: 10vw;
+  background: white;
+  border: 1px solid white;
+  width: 10vw;
 }
 
 /*ANOTHER SECTION*/
 section.catchingProductsGallery{
 	text-align: center;
-        position: relative;
-        z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .catchingProductsGallery .gallery{
 	display: flex;

@@ -293,7 +293,10 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			let iframe = document.querySelectorAll('iframe');
-			if(window.innerWidth < 800){
+			for(let i = 0; i < iframe.length;i++){
+				Object.assign(iframe[i].style,{position:'absolute',height:'124vh',top:'-15vh',left:'0',width:'100vw'});
+			}
+			/*if(window.innerWidth < 800){
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{position:'abolsute',transform:'scale(1.2)'})
 			      }
@@ -317,7 +320,7 @@
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
 			    }
-			}
+			}*/
 		}
 		function hoverImgPlay(img){
 			'use strict';

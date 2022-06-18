@@ -332,30 +332,6 @@
 					heroPoster.style.height = oldHeight + 'px';
 				}
 			}
-			/*if(window.innerWidth < 800){
-				let oldHeight = window.innerHeight;
-				window.onresize = function(){
-					if(oldHeight < window.innerHeight){
-						document.querySelector('.heroPoster').style.height = window.innerHeight + 'px';
-						oldHeight = window.innerHeight;
-					}else{
-						document.querySelector('.heroPoster').style.height = oldHeight + 'px';
-					}
-				}
-			}*/
-		}
-		/*window.onresize = function(){
-			if(window.innerWidth < 800){
-				if(oldHeight < window.innerHeight){
-						document.querySelector('.heroPoster').style.height = window.innerHeight + 'px';
-						oldHeight = window.innerHeight;
-						console.log('condi2 Done')
-					}else{
-						document.querySelector('.heroPoster').style.height = oldHeight + 'px';
-					}
-			}
-					
-				}*/
 		function hoverImgPlay(img){
 			'use strict';
 			img.style.transform = 'scale(1.1)';
@@ -393,7 +369,6 @@
 			document.querySelector('.overlayMenuBar').classList.add('openOverlay');
 			document.querySelector('.bottomNav').classList.add('openBarMobile');
 		}
-		console.clear();
 	</script>
 </body>
 </html>

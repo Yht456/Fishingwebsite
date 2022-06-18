@@ -794,7 +794,7 @@ footer .footerBottom a{
 	color: white;
 }
 /*MEDIA QUERIES*/
-@media screen and (max-height: 500px){
+@media screen and (max-height: 600px){
 	.heroPoster{
 		min-height: 700px;
 	}

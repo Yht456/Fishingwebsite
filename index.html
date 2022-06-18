@@ -294,18 +294,31 @@
 		let heroPoster = document.querySelector('.heroPoster'),
 			    oldHeight = window.innerHeight;
 		window.onload = function(){
-			console.log(window.oriention);
-			document.addEventListener('onorientationchange',function(){
-				console.log(window.oriention);
-			})
 			let iframe = document.querySelectorAll('iframe');
 			if(window.innerWidth < 800){
 				for(let i = 0; i < iframe.length;i++){
-			        Object.assign(iframe[i].style,{position:'abolsute',top:'-10vh',height:'137vh',transform:'scale(1.2)'})
-			    }
+			        Object.assign(iframe[i].style,{position:'abolsute',transform:'scale(1.2)'})
+			      }
+				if(window.oriention == 90 || window.oriention == -90){
+					    for(let i = 0; i < iframe.length;i++){
+			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
+			            }
+				}
+				document.addEventListener('orientationchange',function(){
+					if(window.oriention == 0 || window.oriention == 180){
+					     for(let i = 0; i < iframe.length;i++){
+			                Object.assign(iframe[i].style,{top:'0',height:'100vh'})
+			             }	
+					}else{
+						for(let i = 0; i < iframe.length;i++){
+			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
+			            }
+					}
+				});
+
 			}else{
 				for(let i = 0; i < iframe.length;i++){
-			        Object.assign(iframe[i].style,{position:'abolsute',top:'-7vh',height:'124vh',transform:'scale(1.1)'})
+			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
 			    }
 			}
 			window.onresize = function(){

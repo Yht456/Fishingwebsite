@@ -299,6 +299,18 @@
 			iframe[i].style.height = '126vh';
 			iframe[i].style.transform = 'scale(1.15)';
 			}
+			if(window.innerWidth < 800){
+				let oldHeight = window.innerHeight;
+				window.onresize = function(){
+					if(oldHeight < window.innerHeight){
+						document.querySelector('.heroPoster').style.height = window.innerHeight + 'px';
+						oldHeight = window.innerHeight;
+						console.log('condi2 Done')
+					}else{
+						document.querySelector('.heroPoster').style.height = oldHeight + 'px';
+					}
+				}
+			}
 		}
 		function hoverImgPlay(img){
 			'use strict';

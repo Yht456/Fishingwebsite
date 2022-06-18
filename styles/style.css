@@ -664,7 +664,7 @@ footer hr:first-child{
   transform: translateX(-50%) rotate(90deg);
 }
 footer hr.belowLineTitle{
-	width: 30%;
+	width: 32.083vw;
 }
 footer .footerContent{
 	display: flex;

@@ -1069,9 +1069,9 @@ footer .footerBottom a{
 	.flickity-prev-next-button.previous .flickity-button-icon{
 		left: 6vw !important;
 	}
-	.videoSec .poster, .videoSec .video{
+	/*.videoSec .poster, .videoSec .video{
 		height: 300px;
-	}
+	}*/
 	.teamSec div.teamContent{
 		padding-left: 0;
 		flex-direction: column;

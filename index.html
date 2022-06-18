@@ -291,6 +291,10 @@
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
+		var iframe;
+		window.onload = function(){
+		      iframe = document.querySelectorAll('iframe');
+		}
 		function hoverImgPlay(img){
 			'use strict';
 			img.style.transform = 'scale(1.1)';
@@ -299,10 +303,13 @@
 			'use strict';
 			img.style.transform = 'scale(1)';
 		}
-        function playVideos(video, player){
+        function playVideos(video, player){ //YOUTUBE
 			'use strict';
 			let parent = video.parentElement.parentElement;
 			parent.querySelector('.vjs-fullscreen-control').click();
+			for(let i = 0; i < iframe.length;i++){
+			        Object.assign(iframe[i].style,{transform:'scale(1.25)'})
+			    }
 			Object.assign(parent.querySelector('.vjs-poster').style,{display:'block',background:'rgba(0,0,0,0)',cursor:'default'});
 			parent.style.display = 'block';
 			parent.style.position ='absolute';
@@ -314,7 +321,7 @@
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';
-					Object.assign(parent.querySelector('.vjs-poster').style,{display:'none',background:'rgba(0,0,0,0)',cursor:'pointer'});
+					Object.assign(parent.querySelector('.vjs-poster').style,{display:'none',cursor:'pointer'});
 					r = 0;
 				}
 			})

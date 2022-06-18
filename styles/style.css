@@ -1008,15 +1008,19 @@ footer .footerBottom a{
 	.topSection nav .topNav{
 		font-size: 2vw;
 	}
+	.topNav .locationNavBarIcon{
+		width: 2.5vw;
+	}
 	.topNav .logo{
 		flex-grow: 2;
-		max-width: 12vw;
+		max-width: 13vw;
+		left: -3vw;
 	}
 	.topNav .barMenu + a{
 		margin-right: 3vw;
 	}
 	.topNav p:first-child{
-		font-size: 3vw;
+		font-size: 3.5vw;
 	}
 	.topNav p:first-child svg{
 		width: 5vw;

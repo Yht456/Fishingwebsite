@@ -308,7 +308,7 @@
 			'use strict';
 			img.style.transform = 'scale(1)';
 		}
-        function playVideos(video, player){ //YOUTUBE
+        function playVideos(video, player){
 			'use strict';
 			let parent = video.parentElement.parentElement;
 			parent.querySelector('.vjs-fullscreen-control').click()
@@ -325,6 +325,7 @@
 				}
 			})
 			player.on('ended',function(){player.play()});
+		        console.clear();
 		}
 		function removeNav(){
 			'use strict';
@@ -336,6 +337,7 @@
 			document.querySelector('.overlayMenuBar').classList.add('openOverlay');
 			document.querySelector('.bottomNav').classList.add('openBarMobile');
 		}
+		console.clear();
 	</script>
 </body>
 </html>

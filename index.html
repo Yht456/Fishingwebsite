@@ -299,13 +299,13 @@
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{position:'abolsute',transform:'scale(1.2)'})
 			      }
-				if(window.oriention == 90 || window.oriention == -90){
+				if(screen.orientation.angle == 90 || screen.orientation.angle == -90){
 					    for(let i = 0; i < iframe.length;i++){
 			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
 			            }
 				}
-				document.addEventListener('orientationchange',function(){
-					if(window.oriention == 0 || window.oriention == 180){
+				ScreenOrientation.onchange = function(){
+					if(screen.orientation.angle == 0 || screen.orientation.angle == 180){
 					     for(let i = 0; i < iframe.length;i++){
 			                Object.assign(iframe[i].style,{top:'0',height:'100vh'})
 			             }	
@@ -314,7 +314,7 @@
 			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
 			            }
 					}
-				});
+				};
 
 			}else{
 				for(let i = 0; i < iframe.length;i++){

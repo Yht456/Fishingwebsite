@@ -39,7 +39,7 @@
 		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg softAnimation">
 		    </div>
 		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
-                 <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" />
+                 <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" />
             </video>
 		    <div class="textVideo">
 		    	<p class="smallTitle greyTitle">feature film</p>
@@ -111,7 +111,7 @@
 		<div class="video">
 			<div class="poster softAnimation"></div>
 		    <video controls data-setup='{}' id="techVideo" class="video-js">
-			    <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?modestbranding=1&showinfo=0&enablejsapi=1" type="video/youtube" /> 
+			    <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&modestbranding=1&showinfo=0&enablejsapi=1" type="video/youtube" /> 
 		    </video>
 		    <div class="textVideo">
 		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))" onclick="playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'))"><img alt="" src="icons/play-button.png">
@@ -299,7 +299,7 @@
 			      }
 				if(screen.orientation.angle == 90 || screen.orientation.angle == 270){
 					    for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
+			                Object.assign(iframe[i].style,{top:'-6vh',height:'139vh'})
 			            }
 				}
 				screen.orientation.onchange = function(){
@@ -309,7 +309,7 @@
 			             }	
 					}else{
 						for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-10vh',height:'137vh'})
+			                Object.assign(iframe[i].style,{top:'-6vh',height:'139vh'})
 			            }
 					}
 				}

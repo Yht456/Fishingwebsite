@@ -315,11 +315,9 @@
 			parent.style.display = 'block';
 			parent.style.position ='absolute'
 			player.play();
-			
 			let r = 0;
 			document.addEventListener('fullscreenchange',function(e){
 				r++;
-				console.log(r);
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';

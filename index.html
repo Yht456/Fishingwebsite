@@ -39,7 +39,7 @@
 		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg softAnimation">
 		    </div>
 		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
-                 <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" />
+                 <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" />
             </video>
 		    <div class="textVideo">
 		    	<p class="smallTitle greyTitle">feature film</p>
@@ -111,7 +111,7 @@
 		<div class="video">
 			<div class="poster softAnimation"></div>
 		    <video controls data-setup='{}' id="techVideo" class="video-js">
-			    <source src="https://www.youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&modestbranding=1&showinfo=0&enablejsapi=1" type="video/youtube" /> 
+			    <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" /> 
 		    </video>
 		    <div class="textVideo">
 		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))" onclick="playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'))"><img alt="" src="icons/play-button.png">
@@ -291,39 +291,6 @@
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
-		window.onload = function(){
-			let iframe = document.querySelectorAll('iframe');
-			if(window.innerWidth < 1000 & window.innerWidth > 700){
-				for(let i = 0; i < iframe.length;i++){
-			        Object.assign(iframe[i].style,{position:'abolsute',transform:'scale(1.2)'})
-			      }
-				if(screen.orientation.angle == 90 || screen.orientation.angle == 270){
-					    for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-9vh',height:'117vh'})
-			            }
-				}
-				screen.orientation.onchange = function(){
-					if(screen.orientation.angle == 0 || screen.orientation.angle == 180){
-					     for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'0',height:'100vh'})
-			             }	
-					}else{
-						for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-9vh',height:'137vh'})
-			            }
-					}
-				}
-			} else if(window.innerWidth < 700){
-				for(let i = 0; i < iframe.length;i++){
-			                Object.assign(iframe[i].style,{top:'-10vh',height:'121vh'})
-			            }
-			}
-			else{
-				for(let i = 0; i < iframe.length;i++){
-			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
-			    }
-			}
-		}
 		function hoverImgPlay(img){
 			'use strict';
 			img.style.transform = 'scale(1.1)';
@@ -336,8 +303,10 @@
 			'use strict';
 			let parent = video.parentElement.parentElement;
 			parent.querySelector('.vjs-fullscreen-control').click();
+			Object.assign(parent.querySelector('.vjs-poster').style,{display:'block',background:'rgba(0,0,0,0)',cursor:'default'});
 			parent.style.display = 'block';
 			parent.style.position ='absolute';
+			player.controls(false);
 			player.play();
 			let r = 0;
 			document.addEventListener('fullscreenchange',function(e){
@@ -345,6 +314,7 @@
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';
+					Object.assign(parent.querySelector('.vjs-poster').style,{display:'none',background:'rgba(0,0,0,0)',cursor:'pointer'});
 					r = 0;
 				}
 			})

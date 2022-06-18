@@ -315,7 +315,6 @@
 			            }
 					}
 				}
-
 			}else{
 				for(let i = 0; i < iframe.length;i++){
 			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
@@ -340,10 +339,11 @@
 		}
         function playVideos(video, player){
 			'use strict';
+			let beforePosterHeight = heroPoster.style.height;
 			let parent = video.parentElement.parentElement;
-			parent.querySelector('.vjs-fullscreen-control').click()
+			parent.querySelector('.vjs-fullscreen-control').click();
 			parent.style.display = 'block';
-			parent.style.position ='absolute'
+			parent.style.position ='absolute';
 			player.play();
 			let r = 0;
 			document.addEventListener('fullscreenchange',function(e){
@@ -351,6 +351,7 @@
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';
+					heroPoster.style.height = beforePosterHeight;
 					r = 0;
 				}
 			})

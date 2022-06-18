@@ -291,9 +291,6 @@
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
-		let heroPoster = document.querySelector('.heroPoster'),
-			    oldHeight = window.innerHeight,
-			    resize = true;
 		window.onload = function(){
 			let iframe = document.querySelectorAll('iframe');
 			if(window.innerWidth < 800){
@@ -321,19 +318,6 @@
 			        Object.assign(iframe[i].style,{top:'-7vh',height:'124vh',transform:'scale(1.1)'})
 			    }
 			}
-			/*window.onresize = function(e){
-				if(resize == true){
-				    if(oldHeight < window.innerHeight){
-					    heroPoster.style.height = window.innerHeight + 'px';
-					    oldHeight = window.innerHeight;
-				    }else{
-					    heroPoster.style.height = oldHeight + 'px';
-				    }
-			    }else{
-			    	e.preventDefault();
-			    	resize = true;
-			    }
-		    }*/
 		}
 		function hoverImgPlay(img){
 			'use strict';
@@ -345,7 +329,6 @@
 		}
         function playVideos(video, player){
 			'use strict';
-			let beforePosterHeight = heroPoster.style.height;
 			let parent = video.parentElement.parentElement;
 			parent.querySelector('.vjs-fullscreen-control').click();
 			parent.style.display = 'block';
@@ -357,8 +340,6 @@
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';
-					resize = false;
-					heroPoster.style.height = beforePosterHeight;
 					r = 0;
 				}
 			})

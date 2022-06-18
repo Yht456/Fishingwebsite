@@ -291,15 +291,6 @@
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
-		let heroPoster = document.querySelector('.heroPoster'),
-		    oldHeight = window.innerHeight;
-		window.onresize = () => {
-			if(oldHeight > window.innerHeight){
-				heroPoster.style.height = oldHeight + 'px';
-			}else{
-				oldHeight = window.innerHeight;
-			}
-		}
 		window.onload = function(){
 			let iframe = document.querySelectorAll('iframe');
 			for(let i = 0; i < iframe.length;i++){

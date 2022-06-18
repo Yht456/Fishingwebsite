@@ -292,6 +292,10 @@
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
 		window.onload = function(){
+			console.log(window.oriention);
+			document.addEventListener('onorientationchange',function(){
+				console.log(window.oriention);
+			})
 			let iframe = document.querySelectorAll('iframe');
 			if(window.innerWidth < 800){
 				for(let i = 0; i < iframe.length;i++){

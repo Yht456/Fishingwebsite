@@ -321,7 +321,7 @@
 			    }
 			}
 			window.onresize = function(e){
-				if(done == true){
+				if(resize == true){
 				    if(oldHeight < window.innerHeight){
 					    heroPoster.style.height = window.innerHeight + 'px';
 					    oldHeight = window.innerHeight;
@@ -330,7 +330,7 @@
 				    }
 			    }else{
 			    	e.preventDefault();
-			    	done = true;
+			    	resize = true;
 			    }
 		    }
 		}
@@ -356,7 +356,7 @@
 				if(r >= 2){
 					player.pause();
 					parent.style.display = 'none';
-					done = false;
+					resize = false;
 					heroPoster.style.height = beforePosterHeight;
 					r = 0;
 				}

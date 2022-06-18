@@ -286,6 +286,7 @@ footer ul li a:hover::after{
 .video .heroPoster{
 	overflow: hidden;
 	z-index: 99;
+	min-height: 500px;
 	height: 100vh;
 }
 .video-js .vjs-big-play-button, .video-js .vjs-picture-in-picture-control{

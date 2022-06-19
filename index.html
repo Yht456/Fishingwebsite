@@ -300,21 +300,35 @@
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
 		var iframe,
-		    playBtns = document.querySelectorAll('.playBtn');
+		    playBtns = document.querySelectorAll('.playBtn'),
+		    rp = 0;
 		window.onload = function(){
 		      iframe = document.querySelectorAll('iframe');
-		      function playVideos(video, player){ //YOUTUBE
+		      function playVideos(video, player,index){ //YOUTUBE
 			'use strict';
 			let parent = video.parentElement.parentElement;
 			parent.querySelector('.vjs-fullscreen-control').click();
 			for(let i = 0; i < iframe.length;i++){
-			        Object.assign(iframe[i].style,{transform:'scale(1)'})
+			        Object.assign(iframe[i].style,{transform:'scale(1.2)'})
 			    }
-			Object.assign(parent.querySelector('.vjs-poster').style,{display:'block',background:'rgba(0,0,0,0)',cursor:'default'});
+			if(rp == 0){
+				Object.assign(iframe[index].style,{opacity:0});
+				Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(255,255,255,1)'});
+			}else{
+				Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)'});
+			}
+			Object.assign(parent.querySelector('.vjs-poster').style,{display:'block',cursor:'default'});
 			parent.style.display = 'block';
 			parent.style.position ='absolute';
 			player.play();
 			player.controls(false);
+			if(rp == 0){
+				player.on('playing',function(){
+				    Object.assign(iframe[index].style,{opacity:1})
+				    Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)'})
+			    });
+			    rp++;
+			}
 			let r = 0;
 			document.addEventListener('fullscreenchange',function(e){
 				r++;
@@ -328,10 +342,10 @@
 			player.on('ended',function(){player.play()});
 		  }
 		    playBtns[0].onclick = function(){
-		  	playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'));
+		  	playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'),0);
 		  }
 		    playBtns[1].onclick = function(){
-		  	playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'))
+		  	playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'),1)
 		  }
 		}
 		function hoverImgPlay(img){

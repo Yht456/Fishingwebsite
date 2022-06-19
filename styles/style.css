@@ -1028,8 +1028,17 @@ footer .footerBottom a{
 	.topSection video{
 		width: 150%;
 	}
+	.topSection .smallTitle{
+		font-size: 4vw;
+	}
+	.video .textVideo h1{
+		font-size: 7vw;
+	}
+	.topSection .smallDesc{
+		font-size: 3vw;
+	}
 	.textVideo button img{
-		width: 12vw;
+		width: 17vw;
 	}
 	.lineTopSection{
 		width: 20vw;
@@ -1170,5 +1179,6 @@ footer .footerBottom a{
 	.aboutProductContainer .productCategories{
 		justify-content: initial;
 	}
+
 	.gearSection .flickity-page-dots .dot{bottom:-5vw}
 }

@@ -314,6 +314,7 @@
 			parent.style.display = 'block';
 			parent.style.position ='absolute';
 			player.play();
+			player.controls(false);
 			let r = 0;
 			document.addEventListener('fullscreenchange',function(e){
 				r++;

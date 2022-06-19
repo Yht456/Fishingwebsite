@@ -47,13 +47,13 @@
 		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg softAnimation">
 		    </div>
 		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
-                 <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" />
+                 <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0" type="video/youtube" />
             </video>
 		    <div class="textVideo">
 		    	<p class="smallTitle greyTitle">feature film</p>
 		    	<h1 class="bigTitle">Meet BlackBay Lodge</h1>
 		    	<p class="smallDesc">Pike fishing in Brazil featuring our cutting-edge fishing hooks.</p>
-		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))" onclick="playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'))"><img alt="" src="icons/play-button.png"></button>
+		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))"><img alt="" src="icons/play-button.png"></button>
 		    </div>
 	    </div>
 
@@ -119,10 +119,10 @@
 		<div class="video">
 			<div class="poster softAnimation"></div>
 		    <video controls data-setup='{}' id="techVideo" class="video-js">
-			    <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com" type="video/youtube" /> 
+			    <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&enablejsapi=1&autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0"/> 
 		    </video>
 		    <div class="textVideo">
-		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))" onclick="playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'))"><img alt="" src="icons/play-button.png">
+		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))"><img alt="" src="icons/play-button.png">
 		    	</button>
 		    </div>
 	    </div>
@@ -299,29 +299,20 @@
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript">
-		var iframe;
+		var iframe,
+		    playBtns = document.querySelectorAll('.playBtn');
 		window.onload = function(){
 		      iframe = document.querySelectorAll('iframe');
-		}
-		function hoverImgPlay(img){
-			'use strict';
-			img.style.transform = 'scale(1.1)';
-		}
-		function leaveImgPlay(img){
-			'use strict';
-			img.style.transform = 'scale(1)';
-		}
-        function playVideos(video, player){ //YOUTUBE
+		      function playVideos(video, player){ //YOUTUBE
 			'use strict';
 			let parent = video.parentElement.parentElement;
 			parent.querySelector('.vjs-fullscreen-control').click();
 			for(let i = 0; i < iframe.length;i++){
-			        Object.assign(iframe[i].style,{transform:'scale(1.25)'})
+			        Object.assign(iframe[i].style,{transform:'scale(1)'})
 			    }
 			Object.assign(parent.querySelector('.vjs-poster').style,{display:'block',background:'rgba(0,0,0,0)',cursor:'default'});
 			parent.style.display = 'block';
 			parent.style.position ='absolute';
-			player.controls(false);
 			player.play();
 			let r = 0;
 			document.addEventListener('fullscreenchange',function(e){
@@ -334,6 +325,21 @@
 				}
 			})
 			player.on('ended',function(){player.play()});
+		  }
+		    playBtns[0].onclick = function(){
+		  	playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'));
+		  }
+		    playBtns[1].onclick = function(){
+		  	playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'))
+		  }
+		}
+		function hoverImgPlay(img){
+			'use strict';
+			img.style.transform = 'scale(1.1)';
+		}
+		function leaveImgPlay(img){
+			'use strict';
+			img.style.transform = 'scale(1)';
 		}
 		function removeNav(){
 			'use strict';

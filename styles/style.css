@@ -297,7 +297,7 @@ footer ul li a:hover::after{
 	min-height: 500px;
 	height: 100vh;
 }
-.heroPoster iframe{
+/*.heroPoster iframe{
 	position: absolute;
   top: 50%;
   left: 50%;
@@ -307,7 +307,7 @@ footer ul li a:hover::after{
   min-height: 148vh;
   min-width: 177.77vh; /* 16/9*100 = 177.77 */
   z-index: -1;
-}
+}*/
 iframe#player2{
 	position: absolute;
 	top: 0;

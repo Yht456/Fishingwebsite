@@ -6,7 +6,7 @@ var heroPosterImg = document.querySelector('.heroPosterImg'),
     endSecs = 15;
     score = 0;
 
-var player = videojs('heroVideoBg',{
+/*var player = videojs('heroVideoBg',{
 	muted:true,
 	controls:0,
 	autoplay:1
@@ -33,7 +33,7 @@ player.on('playing',function(){
     player.on('ended',function(){
     	player.play();
     })
-});
+});*/
 
 
 let player2 = videojs('techVideoBg',{

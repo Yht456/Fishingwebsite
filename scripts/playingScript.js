@@ -68,10 +68,10 @@ player2.on('playing',function(){
 
 function heroVideoResponsive(){
 	if(window.innerWidth <= 800){
-		Object.assign(heroPoster.style,{height:`70vw`,minHeight:'auto'})
+		Object.assign(heroPoster.style,{/*height:`70vw`,minHeight:'auto'*/animationName:'maxWidth800'})
 	}else if(window.innerWidth <= 1000 & window.innerWidth > 800){
-		Object.assign(heroPoster.style,{height:`59vw`,minHeight:'auto'})
+		Object.assign(heroPoster.style,{/*height:`59vw`,minHeight:'auto'*/animationName:'maxWidth1000'})
 	}else{
-		Object.assign(heroPoster.style,{height:`100vh`,minHeight:'500px'})
+		Object.assign(heroPoster.style,{/*height:`100vh`,minHeight:'500px'*/animationName:'default'})
 	}
 }

@@ -298,6 +298,27 @@ footer ul li a:hover::after{
 	height: 100vh;
 	/*min-width: 177.77vh;*/
 	width: 100vw;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+@keyframes maxWidth1000{
+	to{
+		height: 59vw;
+		min-height: auto;
+	}
+}
+@keyframes maxWidth800{
+	to{
+		height: 70vw;
+		min-height: auto;
+	}
+}
+@keyframes defaultWidth{
+	to{
+		height: 100vh;
+		min-height: 500px;
+	}
 }
 /*.heroPoster iframe{
 	position: absolute;
@@ -944,9 +965,6 @@ footer .footerBottom a{
 }
 
 @media screen and (max-width: 800px){
-	.video .heroPoster{
-		height: 70vw;
-	}
 	.topNav .locationNavBarIcon{
 		width: 2vw;
 		margin-right: 1.5vw;

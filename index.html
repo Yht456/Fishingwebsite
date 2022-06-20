@@ -311,7 +311,7 @@
 		      	parent.style.display = 'block';
 		      	parent.style.position ='absolute';
 		      	Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});
-		      	playerFullScreen.muted(true);
+		      	parent.querySelector('.vjs-big-play-button').click();
 		      	playerFullScreen.play();
 		      	playerFullScreen.controls(false);
 		      	let r = 0;

@@ -10,8 +10,10 @@ endSecs = 15;
 var player = videojs('heroVideoBg',{
 	muted:true,
 	controls:0,
-	autoplay:1
 });
+player.ready(function(){
+	this.play();
+})
 player.on('playing',function(){
 	if(player.currentTime() < startSecs){
 		player.currentTime(startSecs);

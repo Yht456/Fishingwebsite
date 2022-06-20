@@ -881,10 +881,6 @@ footer .footerBottom a{
 	}
 }
 @media screen and (max-width: 1000px){
-	.video .heroPoster{
-		height: 59vw;
-		min-height: auto;
-	}
 	.topSection .smallTitle{
 		font-size: 2.5vw;
 	}

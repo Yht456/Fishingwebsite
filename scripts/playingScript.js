@@ -8,10 +8,8 @@ endSecs = 15;
 var player = videojs('heroVideoBg',{
 	muted:true,
 	controls:0,
+	autoplay:1
 });
-player.ready(function(){
-	this.play();
-})
 player.on('playing',function(){
 	if(player.currentTime() < startSecs){
 		player.currentTime(startSecs);
@@ -23,6 +21,10 @@ player.on('playing',function(){
 			textVideo.children[i].classList.add('fade');
 		}
 		textVideo.querySelector('button').style.animationName = 'toCenter';
+		heroVideoResponsive();
+		window.onresize = function(){
+		heroVideoResponsive();
+	   }
 	},3000);
 	player.on('ended',function(){
 		player.play();
@@ -62,3 +64,13 @@ player2.on('playing',function(){
 		player2.play();
 	})
 })
+
+function heroVideoResponsive(){
+	if(window.innerWidth <= 800){
+		Object.assign(heroPoster.style,{height:`70vw`,minHeight:'auto'})
+	}else if(window.innerWidth <= 1000 & window.innerWidth > 800){
+		Object.assign(heroPoster.style,{height:`59vw`,minHeight:'auto'})
+	}else{
+		Object.assign(heroPoster.style,{height:`100vh`,minHeight:'500px'})
+	}
+}

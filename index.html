@@ -302,6 +302,7 @@
 		rp = 0;
 		window.onload = function(){
 			iframe = document.querySelectorAll('iframe');
+			}
 		      function playVideos(video, player,index){ //YOUTUBE
 		      	'use strict';
 		      	iframe[index].style.transform = 'scale(1.2)'
@@ -323,7 +324,6 @@
 		      	})
 		      	player.on('ended',function(){player.play()});
 		      }
-		  }
 		  function hoverImgPlay(img){
 		  	'use strict';
 		  	img.style.transform = 'scale(1.1)';

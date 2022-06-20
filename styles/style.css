@@ -580,7 +580,8 @@ section.videoSec{
 	transform: scale(1.6);
 }
 #techVideoBg{
-	height: 56vw;
+	height: 100%;
+	transform: scale(1.8);
 }
 /*FOURTH SECTION*/
 .teamSec .carousel-cell img{

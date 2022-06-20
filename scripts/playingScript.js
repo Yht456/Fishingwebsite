@@ -66,11 +66,8 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 	window.onscroll = function(){
 		if(score == 0){
 			if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
-				console.log('gonna load');
 			    player2.play();
 				score++;
-			}else{
-				console.log('did not reach')
 			}
 		}
 	}

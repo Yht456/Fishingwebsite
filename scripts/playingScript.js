@@ -21,6 +21,8 @@ player.on('playing',function(){
 		for(let i = 0;i < textVideo.children.length - 1;i++){
 			textVideo.children[i].classList.add('fade');
 		}
+		document.querySelector('.video .heroPoster').style.height = document.getElementById('heroVideoBg').getBoundingClientRect().height + 'px';
+		document.querySelector('.video .heroPoster').style.minHeight = 'auto';
 		textVideo.querySelector('button').style.animationName = 'toCenter';
 	},3000);
 	player.on('ended',function(){

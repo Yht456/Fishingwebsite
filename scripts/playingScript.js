@@ -5,7 +5,7 @@ var heroPosterImg = document.querySelector('.heroPosterImg'),
     startSecs = 7,
     endSecs = 15;
 
-    
+
 var player = videojs('heroVideoBg',{
 	muted:true,
 	controls:0,
@@ -51,4 +51,11 @@ player2.on('playing',function(){
 	player2.on('ended',function(){
     	player2.play();
     })
+    window.onscroll = function(){
+    	if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
+    		player2.pause();
+    	}else{
+    		player2.play();
+    	}
+    }
 })

@@ -944,6 +944,10 @@ footer .footerBottom a{
 }
 
 @media screen and (max-width: 800px){
+	.video .heroPoster{
+		height: 43vh;
+		min-height: auto;
+	}
 	.topNav .locationNavBarIcon{
 		width: 2vw;
 		margin-right: 1.5vw;

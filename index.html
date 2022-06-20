@@ -295,7 +295,7 @@
 	<script type="text/javascript" src="scripts/flickity.pkgd.min.js"></script>
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
-	<!-- <script type="text/javascript" src="scripts/playingScript.js"></script> -->
+	<script type="text/javascript" src="scripts/playingScript.js"></script>
 	<script type="text/javascript">
 		var iframe,
 		playBtns = document.querySelectorAll('.playBtn'),
@@ -303,7 +303,7 @@
 		window.onload = function(){
 			iframe = document.querySelectorAll('iframe');
 			}
-		      function playVideos(video, player,index){ //YOUTUBE
+		      function playVideos(video, playerFullScreen,index){ //YOUTUBE
 		      	'use strict';
 		      	iframe[index].style.transform = 'scale(1.2)'
 		      	let parent = video.parentElement.parentElement;
@@ -311,18 +311,18 @@
 		      	parent.style.display = 'block';
 		      	parent.style.position ='absolute';
 		      	Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});
-		      	player.play();
-		      	player.controls(false);
+		      	playerFullScreen.play();
+		      	playerFullScreen.controls(false);
 		      	let r = 0;
 		      	document.addEventListener('fullscreenchange',function(e){
 		      		r++;
 		      		if(r >= 2){
-		      			player.pause();
+		      			playerFullScreen.pause();
 		      			parent.style.display = 'none';
 		      			r = 0;
 		      		}
 		      	})
-		      	player.on('ended',function(){player.play()});
+		      	playerFullScreen.on('ended',function(){playerFullScreen.play()});
 		      }
 		  function hoverImgPlay(img){
 		  	'use strict';

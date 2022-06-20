@@ -43,7 +43,15 @@ let player2 = videojs('techVideoBg',{
 	autoplay:1
 })
 player2.on('playing',function(){
+	if(player2.currentTime() < startSecs){
+		player2.currentTime(startSecs);
+	}
 	setTimeout(function(){
 		techPoster.style.opacity = 0;
-	},3000)
+	},3500)
+})
+player2.on('progress',function(){
+	if(player2.currentTime() > endSecs){
+		player2.currentTime(startSecs);
+	}
 })

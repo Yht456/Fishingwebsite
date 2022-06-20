@@ -550,10 +550,10 @@ section.videoSec{
 	margin-top: calc(3vw + var(--marginSection)) ;
 }
 .videoSec .video{
-	height: 46vw;
 	width: 80%;
 	position: relative;
 	overflow: hidden;
+	border-radius: 3px;
 }
 .videoSec .poster{
 	background-image: url(../assets/vdPoster2nd.jpg);
@@ -1156,9 +1156,6 @@ footer .footerBottom a{
 	}
 	.flickity-prev-next-button.previous .flickity-button-icon{
 		left: 6vw !important;
-	}
-	.videoSec .poster, .videoSec .video{
-		height: 300px;
 	}
 	.teamSec div.teamContent{
 		padding-left: 0;

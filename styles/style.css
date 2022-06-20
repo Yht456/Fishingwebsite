@@ -1228,10 +1228,9 @@ footer .footerBottom a{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 54vw;
-	transform: scale(1.2);
+	height: 56vw;
+	transform: scale(1.25);
 }
 #techVideoBg{
 	height: 54vw;
-	transform: scale(1.16);
 }

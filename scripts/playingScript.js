@@ -21,22 +21,22 @@ player.on('playing',function(){
 		for(let i = 0;i < textVideo.children.length - 1;i++){
 			textVideo.children[i].classList.add('fade');
 		}
-		document.querySelector('.video .heroPoster').style.height = document.getElementById('heroVideoBg').getBoundingClientRect().height + 'px';
-		document.querySelector('.video .heroPoster').style.minHeight = 'auto';
+		if(window.innerWidth < 800){
+			Object.assign(document.querySelector('.video .heroPoster').style,{height:`${document.getElementById('heroVideoBg').getBoundingClientRect().height}px`,minHeight:'auto'})
+		}
+		window.onresize = function(){
+			if(window.innerWidth < 800){
+				Object.assign(document.querySelector('.video .heroPoster').style,{height:`${document.getElementById('heroVideoBg').getBoundingClientRect().height}px`,minHeight:'auto'})
+			}else{
+				Object.assign(document.querySelector('.video .heroPoster').style,{height:'100vh',minHeight:'500px'});
+			}
+		}
 		textVideo.querySelector('button').style.animationName = 'toCenter';
 	},3000);
 	player.on('ended',function(){
 		player.play();
 	})
 });
-function checkTopSectionScroll(){
-	if(window.scrollY / topSection.getBoundingClientRect().height >= 0.5){
-		player.pause();
-	}else{
-		player.play();
-	}
-	checkTechVideoScroll();
-}
 let player2 = videojs('techVideoBg',{
 	muted:true,
 	controls:0,
@@ -57,10 +57,11 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 }
 player2.on('playing',function(){
 	window.onscroll = function(){
-		try{
-			checkTopSectionScroll()
-		}catch(e){
-			checkTechVideoScroll();
+		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
+			setTimeout(function(){
+				techPoster.style.opacity = 0;
+			},2000);
+			player2.play();
 		}
 	}
 	if(player2.currentTime() < startSecs){
@@ -70,15 +71,3 @@ player2.on('playing',function(){
 		player2.play();
 	})
 })
-
-function checkTechVideoScroll(){
-	if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
-		console.log('not enoughly displayed');
-		player2.pause();
-	}else{
-		setTimeout(function(){
-			techPoster.style.opacity = 0;
-		},2000);
-		player2.play();
-	}
-}

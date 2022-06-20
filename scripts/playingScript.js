@@ -4,7 +4,7 @@ var heroPosterImg = document.querySelector('.heroPosterImg'),
     bottomNav = document.querySelector('.bottomNav'),
     startSecs = 7,
     endSecs = 15;
-
+    score = 0;
 
 var player = videojs('heroVideoBg',{
 	muted:true,
@@ -39,23 +39,39 @@ player.on('playing',function(){
 let player2 = videojs('techVideoBg',{
 	muted:true,
 	controls:0,
-	autoplay:1
 })
 player2.on('playing',function(){
 	if(player2.currentTime() < startSecs){
 		player2.currentTime(startSecs);
 	}
-	setTimeout(function(){
-		techPoster.style.opacity = 0;
-	},3500)
-	player2.on('ended',function(){
-    	player2.play();
-    })
-    window.onscroll = function(){
+	window.onscroll = function(){
     	if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
     		player2.pause();
     	}else{
     		player2.play();
     	}
     }
+	setTimeout(function(){
+		techPoster.style.opacity = 0;
+	},1000)
+	player2.on('ended',function(){
+    	player2.play();
+    })
 })
+if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
+	player2.on('loadedmetadata',function(){
+		player2.play();
+	})
+}else{
+	window.onscroll = function(){
+		if(score == 0){
+			if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
+				console.log('gonna load');
+			    player2.play();
+				score++;
+			}else{
+				console.log('did not reach')
+			}
+		}
+	}
+}

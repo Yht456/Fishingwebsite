@@ -299,7 +299,11 @@
 	<script type="text/javascript">
 		var iframe,
 		playBtns = document.querySelectorAll('.playBtn'),
-		rp = 0;
+		rp = 0,
+		showPosterBeucaseOfNav = true;
+	    if(userAgent.match(/edg/i)){
+            showPosterBeucaseOfNav = false;
+        }
 		window.onload = function(){
 			iframe = document.querySelectorAll('iframe');
 			}
@@ -310,10 +314,14 @@
 		      	parent.querySelector('.vjs-fullscreen-control').click();
 		      	parent.style.display = 'block';
 		      	parent.style.position ='absolute';
-		      	Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});
-		      	parent.querySelector('.vjs-big-play-button').click();
-		      	playerFullScreen.play();
-		      	playerFullScreen.controls(false);
+		      	if(showPosterBeucaseOfNav){
+		      		Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});
+		      	    playerFullScreen.play();
+		      	    playerFullScreen.controls(false);
+		      	}else{
+		      	    playerFullScreen.play();
+		      	    playerFullScreen.controls(true);
+		      	}
 		      	let r = 0;
 		      	document.addEventListener('fullscreenchange',function(e){
 		      		r++;

@@ -1249,9 +1249,6 @@ footer .footerBottom a{
 	.aboutProductContainer .productCategories{
 		justify-content: initial;
 	}
-	#techVideoBg{
-	height: 40vw;
-  }
 }
 @media screen and (max-width: 500px){
 	/*section.gearSection .carousel .carousel-cell{

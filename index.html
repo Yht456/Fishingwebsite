@@ -5,18 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="This is a fishing website">
 	<meta name="keywords" content="fishing, sea, gear, ocean, hunting">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="styles/flickity.min.css">
 	<link rel="stylesheet" href="styles/video-js.min.css" />
 	<link href="styles/style.css" rel="stylesheet" />
-	<title>Fishing Website</title>
-	<script type="text/javascript">
-		var noOp = function(){}
-		window.console = {
-			log:noOp,
-			dir:noOp
-		}
-	</script>
+	<title>Fishing Website - original posterr</title>
 </head>
 <body>
 	<section class="topSection">
@@ -44,13 +36,13 @@
 		</nav>
 		<div class="video">
 		    <div class="poster heroPoster">
-		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg softAnimation">
+		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg">   
 		    	<video id="heroVideoBg" class="video-js" preload="auto" data-setup="{}">
                     <source src="youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" />
                 </video>
 		    </div>
 		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
-                 <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" />
+                 <source src="youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" />
             </video>
 		    <div class="textVideo">
 		    	<p class="smallTitle greyTitle">feature film</p>
@@ -59,7 +51,6 @@
 		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))"><img alt="" src="icons/play-button.png"></button>
 		    </div>
 	    </div>
-
 		<!-- Rotate it --><hr class="lineTopSection">
 	</section>
 	<section class="catchingProductsGallery">
@@ -125,7 +116,7 @@
 			    <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" /> 
 		    </video>
 		    <video controls data-setup='{}' id="techVideo" class="video-js">
-			    <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0"/> 
+			    <source src="youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" /> 
 		    </video>
 		    <div class="textVideo">
 		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))"><img alt="" src="icons/play-button.png">
@@ -282,7 +273,7 @@
 						        </ul>
 					    </div>
 					    <div class="menuItemColumnTwo menuItem">
-						        <p class="greyTitle smallSize">information</p>
+						        <p class="greyTitle smallSize">our world</p>
 						        <ul>
 							        <li><a href="#">Menu Item 123</a></li>
 							        <li><a href="#">Menu Item 123</a></li>
@@ -304,7 +295,8 @@
 	<script type="text/javascript" src="scripts/flickity.pkgd.min.js"></script>
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
-	<script type="text/javascript" src="scripts/playingScript.js"></script>
+	<script type="text/javascript" src="background.min.js"></script>
+	<script type="text/javascript" src="script2.js"></script>
 	<script type="text/javascript">
 		var iframe,
 		    playBtns = document.querySelectorAll('.playBtn'),

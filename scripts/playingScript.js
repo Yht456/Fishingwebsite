@@ -1,4 +1,5 @@
 var heroPosterImg = document.querySelector('.heroPosterImg'),
+heroPoster = document.querySelector('.video .heroPoster'),
 topSection = document.querySelector('.topSection'),
 techPoster = document.querySelector('.videoSec .video .poster'),
 textVideo = document.querySelector('.textVideo'),
@@ -21,18 +22,12 @@ player.on('playing',function(){
 		for(let i = 0;i < textVideo.children.length - 1;i++){
 			textVideo.children[i].classList.add('fade');
 		}
-		if(window.innerWidth < 800){
-			Object.assign(document.querySelector('.video .heroPoster').style,{height:`${document.getElementById('heroVideoBg').getBoundingClientRect().height}px`,minHeight:'auto'})
-		}
-		window.onresize = function(){
-			if(window.innerWidth < 800){
-				Object.assign(document.querySelector('.video .heroPoster').style,{height:`${document.getElementById('heroVideoBg').getBoundingClientRect().height}px`,minHeight:'auto'})
-			}else{
-				Object.assign(document.querySelector('.video .heroPoster').style,{height:'100vh',minHeight:'500px'});
-			}
-		}
 		textVideo.querySelector('button').style.animationName = 'toCenter';
 	},3000);
+	heroVideoResponsive();
+	window.onscroll = function(){
+		heroVideoResponsive();
+	}
 	player.on('ended',function(){
 		player.play();
 	})
@@ -71,3 +66,15 @@ player2.on('playing',function(){
 		player2.play();
 	})
 })
+
+function heroVideoResponsive(){
+	if(window.innerWidth <= 800 & window.innerWidth >= 450){
+		Object.assign(heroPoster.style,{height:`43vh`,minHeight:'auto'})
+	} else if(window.innerWidth < 450){
+		Object.assign(heroPoster.style,{height:`33vh`,minHeight:'auto'})
+	} else if(window.innerWidth < 1000 & window.innerWidth > 800){
+		Object.assign(heroPoster.style,{height:`49vh`,minHeight:'auto'})
+	}else{
+		Object.assign(heroPoster.style,{height:`100vh`,minHeight:'500px'})
+	}
+}

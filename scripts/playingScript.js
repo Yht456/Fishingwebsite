@@ -1,4 +1,5 @@
 var heroPosterImg = document.querySelector('.heroPosterImg'),
+heroPoster = document.querySelector('.video .heroPoster'),
 techPoster = document.querySelector('.videoSec .video .poster'),
 textVideo = document.querySelector('.textVideo'),
 bottomNav = document.querySelector('.bottomNav'),

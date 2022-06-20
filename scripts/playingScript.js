@@ -22,12 +22,12 @@ player.on('playing',function(){
 		for(let i = 0;i < textVideo.children.length - 1;i++){
 			textVideo.children[i].classList.add('fade');
 		}
+		heroVideoResponsive();
+	        window.onresize = function(){
+		      heroVideoResponsive();
+	        }
 		textVideo.querySelector('button').style.animationName = 'toCenter';
 	},3000);
-	heroVideoResponsive();
-	window.onscroll = function(){
-		heroVideoResponsive();
-	}
 	player.on('ended',function(){
 		player.play();
 	})

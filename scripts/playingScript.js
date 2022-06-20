@@ -1,9 +1,9 @@
 var heroPosterImg = document.querySelector('.heroPosterImg'),
-    techPoster = document.querySelector('.videoSec .video .poster'),
-    textVideo = document.querySelector('.textVideo'),
-    bottomNav = document.querySelector('.bottomNav'),
-    startSecs = 7,
-    endSecs = 15;
+techPoster = document.querySelector('.videoSec .video .poster'),
+textVideo = document.querySelector('.textVideo'),
+bottomNav = document.querySelector('.bottomNav'),
+startSecs = 7,
+endSecs = 15;
 
 
 var player = videojs('heroVideoBg',{
@@ -22,17 +22,17 @@ player.on('playing',function(){
 			textVideo.children[i].classList.add('fade');
 		}
 		textVideo.querySelector('button').style.animationName = 'toCenter';
-	},1000);
+	},3000);
 	window.onscroll = function(){
-        if(window.scrollY / heroPosterImg.offsetHeight >= 0.6){
-            player.pause();
-        }else{
-            player.play();
-        }
-    }
-    player.on('ended',function(){
-    	player.play();
-    })
+		if(window.scrollY / heroPosterImg.offsetHeight >= 0.6){
+			player.pause();
+		}else{
+			player.play();
+		}
+	}
+	player.on('ended',function(){
+		player.play();
+	})
 });
 
 
@@ -40,24 +40,36 @@ let player2 = videojs('techVideoBg',{
 	muted:true,
 	controls:0,
 	autoplay:1
-})
+});
+if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
+	player2.on('playing',function(){
+		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
+			player2.pause();
+		}else{
+			player2.play();
+		}
+		setTimeout(function(){
+			techPoster.style.opacity = 0;
+		},2000);
+		player2.play();
+	})
+}
 player2.on('playing',function(){
 	window.onscroll = function(){
-    	if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
-    		player2.pause();
-    		console.log('not enoughly displayed')
-    	}else{
-    		console.log('enougly displayed');
-    		if(player2.currentTime() < startSecs){
-				player2.currentTime(startSecs);
-			}
-    		setTimeout(function(){
+		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
+			console.log('not enoughly displayed');
+			player2.pause();
+		}else{
+			setTimeout(function(){
 				techPoster.style.opacity = 0;
-			},1000);
-    		player2.play();
-    	}
-    }
+			},2000);
+			player2.play();
+		}
+	}
+	if(player2.currentTime() < startSecs){
+		player2.currentTime(startSecs);
+	}
 	player2.on('ended',function(){
-    	player2.play();
-    })
+		player2.play();
+	})
 })

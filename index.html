@@ -35,73 +35,73 @@
 			</ul>
 		</nav>
 		<div class="video">
-		    <div class="poster heroPoster">
-		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg">   
-		    	<video id="heroVideoBg" class="video-js" preload="auto" data-setup="{}">
-                    <source src="https://youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0&start=7&end=15" type="video/youtube" />
-                </video>
-		    </div>
-		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
-                 <source src="https://youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" />
-            </video>
-		    <div class="textVideo">
-		    	<p class="smallTitle greyTitle">feature film</p>
-		    	<h1 class="bigTitle">Meet BlackBay Lodge</h1>
-		    	<p class="smallDesc">Pike fishing in Brazil featuring our cutting-edge fishing hooks.</p>
-		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))"><img alt="" src="icons/play-button.png"></button>
-		    </div>
-	    </div>
+			<div class="poster heroPoster">
+				<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg">   
+				<video id="heroVideoBg" class="video-js" preload="auto" data-setup="{}">
+					<source src="https://youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0&start=7&end=15&origin=http://localhost:80" type="video/youtube" />
+				</video>
+			</div>
+			<video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
+				<source src="https://youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" />
+			</video>
+			<div class="textVideo">
+				<p class="smallTitle greyTitle">feature film</p>
+				<h1 class="bigTitle">Meet BlackBay Lodge</h1>
+				<p class="smallDesc">Pike fishing in Brazil featuring our cutting-edge fishing hooks.</p>
+				<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))" onclick="playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'),1)"><img alt="" src="icons/play-button.png"></button>
+			</div>
+		</div>
 		<!-- Rotate it --><hr class="lineTopSection">
 	</section>
 	<section class="catchingProductsGallery">
 		<p class="sectionTitle initial">Ready to make that catch?</p>
 		<div class="gallery">
-		    <div class="row firstRow">
-			    <div class="imgCatch">
-			    	<div class="overlay"></div>
-				    <img alt="" src="assets/Bait-hook-Carp-Continental-R-734x734.jpg">
-				    <p class="title">Bait Hooks</p>
-			    </div>
-			    <div class="imgCatch">
-			    	<div class="overlay"></div>
-				    <img alt="" src="assets/Accessories-hp.jpg">
-				    <p class="title">Accessories</p>
-			    </div>
-		    </div>
-		    <div class="row secondRow">
-			    <div class="imgCatch">
-			    	<div class="overlay"></div>
-				    <img alt="" src="assets/hooks-ig.jpg">
-				    <p class="title">Lure Hooks</p>
-			    </div>
-			    <div class="imgCatch">
-			    	<div class="overlay"></div>
-				    <img alt="" src="assets/Apparel-2-hp.jpg">
-				    <p class="title">Apparel</p>
-			    </div>
-		    </div>
+			<div class="row firstRow">
+				<div class="imgCatch">
+					<div class="overlay"></div>
+					<img alt="" src="assets/Bait-hook-Carp-Continental-R-734x734.jpg">
+					<p class="title">Bait Hooks</p>
+				</div>
+				<div class="imgCatch">
+					<div class="overlay"></div>
+					<img alt="" src="assets/Accessories-hp.jpg">
+					<p class="title">Accessories</p>
+				</div>
+			</div>
+			<div class="row secondRow">
+				<div class="imgCatch">
+					<div class="overlay"></div>
+					<img alt="" src="assets/hooks-ig.jpg">
+					<p class="title">Lure Hooks</p>
+				</div>
+				<div class="imgCatch">
+					<div class="overlay"></div>
+					<img alt="" src="assets/Apparel-2-hp.jpg">
+					<p class="title">Apparel</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="gearSection">
 		<p class="sectionTitle">Latest Gear</p>
 		<div class="carousel" data-flickity='{"groupCells":"true","freeScroll":"true","wrapAround":"true","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}, "cellAlign": "left"}'>
 			<div class="carousel-cell">
-                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
 				<img alt="Gear product" src="assets/Viper-41_ccexpress.jpg">
 				<p>Product 101</p>
 			</div>
 			<div class="carousel-cell">
-                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
 				<img alt="Gear product" src="assets/Titan-Diver-1-1_ccexpress.jpg">
 				<p>Product 101</p>
 			</div>
 			<div class="carousel-cell">
-                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
 				<img alt="Gear product" src="assets/Viper-41_ccexpress.jpg">
 				<p>Product 101</p>
 			</div>
 			<div class="carousel-cell">
-                <a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
+				<a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
 				<img alt="Gear product" src="assets/Titan-Diver-1-1_ccexpress.jpg">
 				<p>Product 101</p>
 			</div>
@@ -113,16 +113,16 @@
 		<div class="video">
 			<div class="poster softAnimation"></div>
 			<video controls data-setup='{}' id="techVideoBg" class="video-js">
-			    <source src="https://youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0&start=7&end=15" type="video/youtube" /> 
-		    </video>
-		    <video controls data-setup='{}' id="techVideo" class="video-js">
-			    <source src="https://youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" /> 
-		    </video>
-		    <div class="textVideo">
-		    	<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))"><img alt="" src="icons/play-button.png">
-		    	</button>
-		    </div>
-	    </div>
+				<source src="https://youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0&start=7&end=15" type="video/youtube" /> 
+			</video>
+			<video controls data-setup='{}' id="techVideo" class="video-js">
+				<source src="https://youtube.com/watch?v=nqye02H_H6I?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" /> 
+			</video>
+			<div class="textVideo">
+				<button class="playBtn" onmouseenter="hoverImgPlay(document.querySelector('.videoSec .video .poster'))" onmouseleave="leaveImgPlay(document.querySelector('.videoSec .video .poster'))" onclick="playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'),2)"><img alt="" src="icons/play-button.png">
+				</button>
+			</div>
+		</div>
 	</section>
 	<section class="teamSec">
 		<p class="sectionTitle initial">Learn from the team</p>
@@ -135,32 +135,32 @@
 				<a href="#" class="zoomAnimationLink">join our team</a>
 			</div>
 			<div class="carousel" data-flickity='{"groupCells":"true","freeScroll":"true","cellAlign":"left","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}}'>
-			<div class="carousel-cell" style="">
-				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/pro-1-wse2.jpg"></div>
-				<p>Name of Fisherman</p>
-				<p class="nationlity">Italy</p>
+				<div class="carousel-cell" style="">
+					<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/pro-1-wse2.jpg"></div>
+					<p>Name of Fisherman</p>
+					<p class="nationlity">Italy</p>
+				</div>
+				<div class="carousel-cell" style="">
+					<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Christian_pro2.jpg"></div>
+					<p>Name of Fisherman</p>
+					<p class="nationlity">U.S.A</p>
+				</div>
+				<div class="carousel-cell" style="">
+					<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
+					<p>Name of Fisherman</p>
+					<p class="nationlity">Dutch</p>
+				</div>
+				<div class="carousel-cell" style="">
+					<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
+					<p>Name of Fisherman</p>
+					<p class="nationlity">U.S.A</p>
+				</div>
+				<div class="carousel-cell" style="">
+					<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
+					<p>Name of Fisherman</p>
+					<p class="nationlity">Dutch</p>
+				</div>
 			</div>
-			<div class="carousel-cell" style="">
-				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Christian_pro2.jpg"></div>
-				<p>Name of Fisherman</p>
-				<p class="nationlity">U.S.A</p>
-			</div>
-			<div class="carousel-cell" style="">
-				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
-				<p>Name of Fisherman</p>
-				<p class="nationlity">Dutch</p>
-			</div>
-			<div class="carousel-cell" style="">
-				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
-				<p>Name of Fisherman</p>
-				<p class="nationlity">U.S.A</p>
-			</div>
-			<div class="carousel-cell" style="">
-				<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/Matt_pro3.jpg"></div>
-				<p>Name of Fisherman</p>
-				<p class="nationlity">Dutch</p>
-			</div>
-		</div>
 		</div>
 	</section>
 	<section class="socialMediaContent">
@@ -226,7 +226,7 @@
 							<li><a href="#">Product cat name1111</a></li>
 							<li><a href="#">Product cat name1111</a></li>
 						</ul>
-							<p style="margin:0;">product category 2</p>
+						<p style="margin:0;">product category 2</p>
 					</div>
 					<div class="rowTwo">
 						<ul>
@@ -236,8 +236,8 @@
 							<li><a href="#">Product cat name333</a></li>
 							<li><a href="#">Product cat name333</a></li>
 							<li><a href="#">Product cat name333</a></li>
-					    </ul>
-						    <p style="margin: 0;">Apparel</p>
+						</ul>
+						<p style="margin: 0;">Apparel</p>
 					</div>
 				</div>
 			</div>
@@ -245,43 +245,43 @@
 		<div class="socialMediaMenuLists">
 			<div class="generalInfo">
 				<div class="location">
-					    <img alt="" src="icons/locationIcon.png" class="locationFooterIcon">
-					    <div class="selectContainer">
-						    <p class="selectLabel smallSize greyTitle">country</p>
-						    <select>
-							    <option>International (EN)</option>
-							    <option>USA</option>
-							    <option>Australia</option>
-						    </select>
-					    </div>
-				    </div>
-				    <div class="socialMediaLinks">
-					    <p><a href="#" class="borderBottomHoverAnim">Instagram</a></p>
-					    <p><a href="#" class="borderBottomHoverAnim">Facebook</a></p>
-					    <p><a href="#" class="borderBottomHoverAnim">Youtube</a></p>
-				    </div>
-            </div>
-				    <div class="menuLists">
-					<div class="menuItemcColumnOne menuItem">
-						        <p class="greyTitle smallSize">our world</p>
-						        <ul style="margin:0">
-							        <li><a href="#">Menu Item 123</a></li>
-							        <li><a href="#">Menu Item 123</a></li>
-							        <li><a href="#">Menu Item 123</a></li>
-							        <li><a href="#">Menu Item 123</a></li>
-							        <li><a href="#">Menu Item 123</a></li>
-						        </ul>
-					    </div>
-					    <div class="menuItemColumnTwo menuItem">
-						        <p class="greyTitle smallSize">our world</p>
-						        <ul>
-							        <li><a href="#">Menu Item 123</a></li>
-							        <li><a href="#">Menu Item 123</a></li>
-							        <li><a href="#">Menu Item 123</a></li>
-						        </ul>
-					        </div>
+					<img alt="" src="icons/locationIcon.png" class="locationFooterIcon">
+					<div class="selectContainer">
+						<p class="selectLabel smallSize greyTitle">country</p>
+						<select>
+							<option>International (EN)</option>
+							<option>USA</option>
+							<option>Australia</option>
+						</select>
+					</div>
+				</div>
+				<div class="socialMediaLinks">
+					<p><a href="#" class="borderBottomHoverAnim">Instagram</a></p>
+					<p><a href="#" class="borderBottomHoverAnim">Facebook</a></p>
+					<p><a href="#" class="borderBottomHoverAnim">Youtube</a></p>
 				</div>
 			</div>
+			<div class="menuLists">
+				<div class="menuItemcColumnOne menuItem">
+					<p class="greyTitle smallSize">our world</p>
+					<ul style="margin:0">
+						<li><a href="#">Menu Item 123</a></li>
+						<li><a href="#">Menu Item 123</a></li>
+						<li><a href="#">Menu Item 123</a></li>
+						<li><a href="#">Menu Item 123</a></li>
+						<li><a href="#">Menu Item 123</a></li>
+					</ul>
+				</div>
+				<div class="menuItemColumnTwo menuItem">
+					<p class="greyTitle smallSize">our world</p>
+					<ul>
+						<li><a href="#">Menu Item 123</a></li>
+						<li><a href="#">Menu Item 123</a></li>
+						<li><a href="#">Menu Item 123</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div class="footerBottom">
 			<ul class="contactPriv">
 				<li><a href="" class="email">info@website.com</a></li>
@@ -298,56 +298,50 @@
 	<script type="text/javascript" src="scripts/playingScript.js"></script>
 	<script type="text/javascript">
 		var iframe,
-		    playBtns = document.querySelectorAll('.playBtn'),
-		    rp = 0;
+		playBtns = document.querySelectorAll('.playBtn'),
+		rp = 0;
 		window.onload = function(){
-		      iframe = document.querySelectorAll('iframe');
+			iframe = document.querySelectorAll('iframe');
 		      function playVideos(video, player,index){ //YOUTUBE
-			'use strict';
-			iframe[index].style.transform = 'scale(1.2)'
-			let parent = video.parentElement.parentElement;
-			parent.querySelector('.vjs-fullscreen-control').click();
-			parent.style.display = 'block';
-			parent.style.position ='absolute';
-			/*Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'})*/
-			player.play();
-			player.controls(false);
-			let r = 0;
-			document.addEventListener('fullscreenchange',function(e){
-				r++;
-				if(r >= 2){
-					player.pause();
-					parent.style.display = 'none';
-					r = 0;
-				}
-			})
-			player.on('ended',function(){player.play()});
+		      	'use strict';
+		      	iframe[index].style.transform = 'scale(1.2)'
+		      	let parent = video.parentElement.parentElement;
+		      	parent.querySelector('.vjs-fullscreen-control').click();
+		      	parent.style.display = 'block';
+		      	parent.style.position ='absolute';
+		      	Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});
+		      	player.play();
+		      	player.controls(false);
+		      	let r = 0;
+		      	document.addEventListener('fullscreenchange',function(e){
+		      		r++;
+		      		if(r >= 2){
+		      			player.pause();
+		      			parent.style.display = 'none';
+		      			r = 0;
+		      		}
+		      	})
+		      	player.on('ended',function(){player.play()});
+		      }
 		  }
-		    playBtns[0].onclick = function(){
-		  	playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'),1);
+		  function hoverImgPlay(img){
+		  	'use strict';
+		  	img.style.transform = 'scale(1.1)';
 		  }
-		    playBtns[1].onclick = function(){
-		  	playVideos(document.getElementById('techVideo_youtube_api'),videojs('techVideo'),2)
+		  function leaveImgPlay(img){
+		  	'use strict';
+		  	img.style.transform = 'scale(1)';
 		  }
-		}
-		function hoverImgPlay(img){
-			'use strict';
-			img.style.transform = 'scale(1.1)';
-		}
-		function leaveImgPlay(img){
-			'use strict';
-			img.style.transform = 'scale(1)';
-		}
-		function removeNav(){
-			'use strict';
-			document.querySelector('.overlayMenuBar').classList.remove('openOverlay');
-			document.querySelector('.bottomNav').classList.remove('openBarMobile');
-		}
-		function openNav(){
-			'use strict';
-			document.querySelector('.overlayMenuBar').classList.add('openOverlay');
-			document.querySelector('.bottomNav').classList.add('openBarMobile');
-		}
-	</script>
-</body>
-</html>
+		  function removeNav(){
+		  	'use strict';
+		  	document.querySelector('.overlayMenuBar').classList.remove('openOverlay');
+		  	document.querySelector('.bottomNav').classList.remove('openBarMobile');
+		  }
+		  function openNav(){
+		  	'use strict';
+		  	document.querySelector('.overlayMenuBar').classList.add('openOverlay');
+		  	document.querySelector('.bottomNav').classList.add('openBarMobile');
+		  }
+		</script>
+	</body>
+	</html>

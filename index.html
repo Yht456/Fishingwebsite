@@ -297,12 +297,21 @@
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript" src="scripts/playingScript.js"></script>
 	<script type="text/javascript">
+		function multipleStringSearch(string,words){
+			words.forEach(function(singleWord){
+				if(string.toLowerCase().indexOf(singleWord.toLowerCase()) > -1){
+					return true;
+				}
+			})
+		}
 		var iframe,
 		playBtns = document.querySelectorAll('.playBtn'),
 		rp = 0,
 		showPosterBeucaseOfNav = true;
-	    if(userAgent.match(/edg/i)){
-            showPosterBeucaseOfNav = false;
+	    if(multipleStringSearch(navigator.userrAgent,['android','iphone','ipad'])){
+	    	if(navigator.userrAgent.toLowerCase().match(/edg/i)){
+	    		showPosterBeucaseOfNav = false;
+	    	}
         }
 		window.onload = function(){
 			iframe = document.querySelectorAll('iframe');

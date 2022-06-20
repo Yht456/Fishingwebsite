@@ -37,9 +37,10 @@
 		<div class="video">
 		    <div class="poster heroPoster">
 		    	<img alt="" src="assets/topSectionVideoPoster.jpg" class="heroPosterImg">   
-		    	<video id="heroVideoBg" class="video-js" preload="auto" data-setup="{}">
+		    	<div id="player"></div>
+		    	<!-- <video id="heroVideoBg" class="video-js" preload="auto" data-setup="{}">
                     <source src="youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0&start=7&end=15" type="video/youtube" />
-                </video>
+                </video> -->
 		    </div>
 		    <video id="heroVideo" class="video-js" controls preload="auto" data-setup="{}">
                  <source src="youtube.com/watch?v=1wkPMUZ9vX4?vq=hd720&controls=0&modestbranding=1&showinfo=0&rel=0" type="video/youtube" />
@@ -296,6 +297,7 @@
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
 	<script type="text/javascript" src="scripts/playingScript.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript">
 		var iframe,
 		    playBtns = document.querySelectorAll('.playBtn'),

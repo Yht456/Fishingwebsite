@@ -1,10 +1,10 @@
 var heroPosterImg = document.querySelector('.heroPosterImg'),
+topSection = document.querySelector('.topSection'),
 techPoster = document.querySelector('.videoSec .video .poster'),
 textVideo = document.querySelector('.textVideo'),
 bottomNav = document.querySelector('.bottomNav'),
 startSecs = 7,
 endSecs = 15;
-
 
 var player = videojs('heroVideoBg',{
 	muted:true,
@@ -23,19 +23,18 @@ player.on('playing',function(){
 		}
 		textVideo.querySelector('button').style.animationName = 'toCenter';
 	},3000);
-	window.onscroll = function(){
-		if(window.scrollY / heroPosterImg.offsetHeight >= 0.6){
-			player.pause();
-		}else{
-			player.play();
-		}
-	}
 	player.on('ended',function(){
 		player.play();
 	})
 });
-
-
+function checkTopSectionScroll(){
+	if(window.scrollY / topSection.getBoundingClientRect().height >= 0.5){
+		player.pause();
+	}else{
+		player.play();
+	}
+	checkTechVideoScroll();
+}
 let player2 = videojs('techVideoBg',{
 	muted:true,
 	controls:0,
@@ -56,14 +55,10 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 }
 player2.on('playing',function(){
 	window.onscroll = function(){
-		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
-			console.log('not enoughly displayed');
-			player2.pause();
-		}else{
-			setTimeout(function(){
-				techPoster.style.opacity = 0;
-			},2000);
-			player2.play();
+		try{
+			checkTopSectionScroll()
+		}catch(e){
+			checkTechVideoScroll();
 		}
 	}
 	if(player2.currentTime() < startSecs){
@@ -73,3 +68,15 @@ player2.on('playing',function(){
 		player2.play();
 	})
 })
+
+function checkTechVideoScroll(){
+	if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
+		console.log('not enoughly displayed');
+		player2.pause();
+	}else{
+		setTimeout(function(){
+			techPoster.style.opacity = 0;
+		},2000);
+		player2.play();
+	}
+}

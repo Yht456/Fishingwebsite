@@ -310,9 +310,9 @@
 		window.onload = function(){
 			iframe = document.querySelectorAll('iframe');
 		}
-		      function playVideos(video, playerFullScreen,index){ //YOUTUBE
+		      function playVideos(video, playerFullScreen,index){
 		      	'use strict';
-		      	iframe[index].style.transform = 'scale(1)';
+		      	/*iframe[index].style.transform = 'scale(1.3)';*/
 		      	let parent = video.parentElement.parentElement;
 		      	if(showPosterBeucaseOfNav){
 		      		Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});

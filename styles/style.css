@@ -358,6 +358,9 @@ iframe#player2{
 .video-js .vjs-fullscreen-control{
 	display: block !important;
 }
+.video-js .vjs-play-control{
+	display: none !important;
+}
 .topSection .video .textVideo{
 	text-align: center;
 	color: white;

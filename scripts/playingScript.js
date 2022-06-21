@@ -72,6 +72,6 @@ function heroVideoResponsive(){
 	}else if(window.innerWidth <= 1000 & window.innerWidth > 800){
 		Object.assign(heroPoster.style,{/*height:`59vw`,minHeight:'auto'*/animationName:'maxWidth1000'})
 	}else{
-		Object.assign(heroPoster.style,{/*height:`100vh`,minHeight:'500px'*/animationName:'default'})
+		Object.assign(heroPoster.style,{/*height:`100vh`,minHeight:'500px'*/animationName:'defaultWidth'})
 	}
 }

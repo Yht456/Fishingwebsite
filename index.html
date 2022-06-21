@@ -328,6 +328,7 @@
 		      	    playerFullScreen.play();
 		      	    playerFullScreen.controls(false);
 		      	}else{
+		      		iframe[index].style.transform = 'scale(1)';
 		      		Object.assign(parent.querySelector('.vjs-poster').style,{display:'none'});
 		      	    playerFullScreen.play();
 		      	    playerFullScreen.controls(true);

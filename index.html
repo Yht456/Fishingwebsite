@@ -309,9 +309,15 @@
 		rp = 0;
 		showPosterBeucaseOfNav = true;
 	    if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
+	    	console.log('on android');
 	    	if(navigator.userAgent.toLowerCase().match(/edg/i)){
+	    		console.log("on edge");
 	    		showPosterBeucaseOfNav = false;
+	    	}else{
+	    		console.log('not on mobile');
 	    	}
+        }else{
+        	console.log('not on android');
         }
 		window.onload = function(){
 			iframe = document.querySelectorAll('iframe');
@@ -328,6 +334,7 @@
 		      	    playerFullScreen.play();
 		      	    playerFullScreen.controls(false);
 		      	}else{
+		      		Object.assign(parent.querySelector('.vjs-poster').style,{display:'none'});
 		      	    playerFullScreen.play();
 		      	    playerFullScreen.controls(true);
 		      	}

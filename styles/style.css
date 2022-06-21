@@ -348,6 +348,15 @@ iframe#player2{
 .video-js .vjs-loading-spinner{
 	display: none !important;
 }
+.vjs-control-bar div{
+	display: none;
+}
+.vjs-control-bar{
+	justify-content: center;
+}
+.video-js .vjs-fullscreen-control{
+	display: block;
+}
 .topSection .video .textVideo{
 	text-align: center;
 	color: white;

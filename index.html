@@ -306,10 +306,11 @@
 		}
 		var iframe,
 		playBtns = document.querySelectorAll('.playBtn'),
-		rp = 0;
-		showPosterBeucaseOfNav = true;
-	    if(navigator.userAgent.toLowerCase().indexOf('android') > -1 || navigator.userAgent.toLowerCase().indexOf('iphone') > -1 || navigator.userAgent.toLowerCase().indexOf('ipad') > -1){
-	    	if(navigator.userAgent.toLowerCase().match(/edg/i)){
+		rp = 0,
+		showPosterBeucaseOfNav = true,
+		userAgent = navigator.userAgent;
+	    if(userAgent.toLowerCase().indexOf('android') > -1 || userAgent.toLowerCase().indexOf('iphone') > -1 || userAgent.toLowerCase().indexOf('ipad') > -1){
+	    	if(userAgent.toLowerCase().match(/edg/i) || userAgent.toLowerCase().match(/opr/i)){
 	    		showPosterBeucaseOfNav = false;
 	    	}
         }

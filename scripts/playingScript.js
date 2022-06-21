@@ -9,7 +9,6 @@ endSecs = 15;
 var player = videojs('heroVideoBg',{
 	muted:true,
 	controls:0,
-	autoplay:1
 });
 player.on('playing',function(){
 	if(player.currentTime() < startSecs){
@@ -24,17 +23,24 @@ player.on('playing',function(){
 		textVideo.querySelector('button').style.animationName = 'toCenter';
 		heroVideoResponsive();
 		window.onresize = function(){
-		heroVideoResponsive();
-	   }
+			heroVideoResponsive();
+		}
 	},2000);
 	player.on('ended',function(){
 		player.play();
+	})
+	document.addEventListener('visibilitychange',function(){
+		if(document.hidden){
+			player.pause();
+		}else{
+			player.play();
+		}
 	})
 });
 let player2 = videojs('techVideoBg',{
 	muted:true,
 	controls:0,
-	autoplay:1
+	
 });
 if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
 	player2.on('playing',function(){
@@ -45,8 +51,15 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 		}
 		setTimeout(function(){
 			techPoster.style.opacity = 0;
-		},1500);
+		},2000);
 		player2.play();
+		document.addEventListener('visibilitychange',function(){
+			if(document.hidden){
+				player2.pause();
+			}else{
+				player2.play();
+			}
+		})
 	})
 }
 player2.on('playing',function(){
@@ -54,7 +67,7 @@ player2.on('playing',function(){
 		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
 			setTimeout(function(){
 				techPoster.style.opacity = 0;
-			},1500);
+			},2000);
 			player2.play();
 		}
 	}
@@ -63,6 +76,9 @@ player2.on('playing',function(){
 	}
 	player2.on('ended',function(){
 		player2.play();
+	})
+	document.addEventListener('visibilitychange',function(){
+		
 	})
 })
 

@@ -48,7 +48,7 @@
 				<p class="smallTitle greyTitle">feature film</p>
 				<h1 class="bigTitle">Meet BlackBay Lodge</h1>
 				<p class="smallDesc">Pike fishing in Brazil featuring our cutting-edge fishing hooks.</p>
-				<button class="playBtn softAnimation" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))" onclick="setTimeout(function(){playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'),1)},50)"><img alt="" src="icons/play-button.png"></button>
+				<button class="playBtn softAnimation" onmouseenter="hoverImgPlay(document.querySelector('.heroPosterImg'))" onmouseleave="leaveImgPlay(document.querySelector('.heroPosterImg'))" onclick="playVideos(document.getElementById('heroVideo_youtube_api'), videojs('heroVideo'),1)"><img alt="" src="icons/play-button.png"></button>
 			</div>
 		</div>
 		<!-- Rotate it --><hr class="lineTopSection">
@@ -330,7 +330,7 @@
 		      	}else{
 		      		Object.assign(parent.querySelector('.vjs-poster').style,{display:'none'});
 		      	    playerFullScreen.play();
-		      	    playerFullScreen.controls(false);
+		      	    playerFullScreen.controls(true);
 		      	}
 		      	let r = 0;
 		      	document.addEventListener('fullscreenchange',function(e){

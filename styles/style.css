@@ -349,13 +349,14 @@ iframe#player2{
 	display: none !important;
 }
 .vjs-control-bar div{
-	display: none;
+	display: none !important;
 }
 .vjs-control-bar{
+	display: flex !important;
 	justify-content: center;
 }
 .video-js .vjs-fullscreen-control{
-	display: block;
+	display: block !important;
 }
 .topSection .video .textVideo{
 	text-align: center;

@@ -539,6 +539,9 @@ section.gearSection{
 	opacity:0;
 	border-radius: 4px;
 }
+.overlayCarousel p{
+	margin: 0;
+}
 .carousel-cell:hover .overlayCarousel{
 	opacity:1;	
 }

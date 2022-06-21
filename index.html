@@ -308,7 +308,7 @@
 		playBtns = document.querySelectorAll('.playBtn'),
 		rp = 0;
 		showPosterBeucaseOfNav = true;
-	    if(multipleStringSearch(navigator.userAgent,['android','iphone','ipad'])){
+	    if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
 	    	if(navigator.userAgent.toLowerCase().match(/edg/i)){
 	    		showPosterBeucaseOfNav = false;
 	    	}

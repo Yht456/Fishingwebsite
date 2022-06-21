@@ -26,7 +26,7 @@ player.on('playing',function(){
 		window.onresize = function(){
 		heroVideoResponsive();
 	   }
-	},3000);
+	},2000);
 	player.on('ended',function(){
 		player.play();
 	})
@@ -45,7 +45,7 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 		}
 		setTimeout(function(){
 			techPoster.style.opacity = 0;
-		},2000);
+		},1500);
 		player2.play();
 	})
 }
@@ -54,7 +54,7 @@ player2.on('playing',function(){
 		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
 			setTimeout(function(){
 				techPoster.style.opacity = 0;
-			},2000);
+			},1500);
 			player2.play();
 		}
 	}

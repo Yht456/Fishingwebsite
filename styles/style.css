@@ -348,10 +348,10 @@ iframe#player2{
 .video-js .vjs-loading-spinner{
 	display: none !important;
 }
-.vjs-control-bar div{
+.video-js .vjs-control-bar div{
 	display: none !important;
 }
-.vjs-control-bar{
+.video-js  .vjs-control-bar{
 	display: flex !important;
 	justify-content: center;
 }

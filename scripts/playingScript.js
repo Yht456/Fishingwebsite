@@ -3,7 +3,7 @@ heroPoster = document.querySelector('.video .heroPoster'),
 techPoster = document.querySelector('.videoSec .video .poster'),
 textVideo = document.querySelector('.textVideo'),
 bottomNav = document.querySelector('.bottomNav'),
-startSecs = 62,
+startSecs = 60,
 endSecs = 76;
 
 var player = videojs('heroVideoBg',{

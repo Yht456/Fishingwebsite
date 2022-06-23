@@ -51,10 +51,10 @@ h1,h2,h3,h4,h5,p,i,button{
 .fade{
 	opacity: 0;
 	cursor: default;
-	transition: .5s ease;
-	-webkit-transition: .5s ease;
-	-moz-transition: .5s ease;
-	-ms-transition: .5s ease;
+	transition: 1s ease;
+	-webkit-transition: 1s ease;
+	-moz-transition: 1s ease;
+	-ms-transition: 1s ease;
 }
 .greyTitle{
 	color: #c2c2c2 !important;
@@ -230,6 +230,7 @@ section:not(:first-child){
 	margin: 1% 35%;
 	font-size: var(--fontSize16ViewPort1440);
 	padding: 0;
+	transition: .5s;
 }
 @media screen and (min-width: 700px){
 	.topSection nav .videoPlayNav{
@@ -383,7 +384,7 @@ iframe#player2{
 	background: none;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
-	animation-duration: .3s;
+	animation-duration: .5s;
 }
 @keyframes toCenter {
 	0%{

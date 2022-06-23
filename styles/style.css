@@ -319,17 +319,6 @@ footer ul li a:hover::after{
 		min-height: 500px;
 	}
 }
-/*.heroPoster iframe{
-	position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 56.25vw; /* 9/16*100 = 56.25 */
-  min-height: 148vh;
-  min-width: 177.77vh; /* 16/9*100 = 177.77 */
-  z-index: -1;
-}*/
 iframe#player2{
 	position: absolute;
 	top: 0;
@@ -591,11 +580,11 @@ section.videoSec{
 	display: block;
 	z-index: -1;
 	width: 100%;
-	height: 100%;
+	height: 120%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	transform: scale(1.3);
+	transform: scale(1.5);
 }
 #techVideoBg{
 	height: 100%;
@@ -923,11 +912,11 @@ footer .footerBottom a{
 		height: .3vw;
 	}
 }
-@media screen and (max-width: 1200px){
+/*@media screen and (max-width: 1200px){
 	#heroVideoBg{
 		transform: scale(1.4);
 	}
-}
+}*/
 @media screen and (max-width: 1000px){
 	.topSection .smallTitle{
 		font-size: 2.5vw;
@@ -990,7 +979,11 @@ footer .footerBottom a{
 		font-size: 20px;
 	}
 }
-
+@media screen and (max-width: 850px){
+	#heroVideoBg{
+		height: 124%;
+	}
+}
 @media screen and (max-width: 800px){
 	.topNav .locationNavBarIcon{
 		width: 2vw;
@@ -1272,6 +1265,17 @@ footer .footerBottom a{
 	}
 	.aboutProductContainer .productCategories{
 		justify-content: initial;
+	}
+}
+@media screen and (max-width: 650px){
+	#heroVideoBg{
+		height: 127%;
+		transform: scale(1.65);
+	}
+}
+@media screen and (max-width: 550px){
+	#heroVideoBg{
+		height: 129%;
 	}
 }
 @media screen and (max-width: 500px){

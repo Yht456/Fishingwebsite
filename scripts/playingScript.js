@@ -4,7 +4,7 @@ techPoster = document.querySelector('.videoSec .video .poster'),
 textVideo = document.querySelector('.textVideo'),
 bottomNav = document.querySelector('.bottomNav'),
 startSecsVid1 = 62,
-endSecsVid2 = 75,
+endSecsVid1 = 77,
 startSecsVid2 = 7,
 endSecsVid2 = 15;
 
@@ -16,6 +16,7 @@ player.on('playing',function(){
 	if(player.currentTime() < startSecsVid1){
 		player.currentTime(startSecsVid1);
 	}
+	loopVideo(player,startSecsVid1,endSecsVid1);
 	setTimeout(function(){
 		heroPosterImg.style.opacity = 0;
 		bottomNav.classList.add('videoPlayNav');
@@ -46,6 +47,7 @@ let player2 = videojs('techVideoBg',{
 });
 if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
 	player2.on('playing',function(){
+		loopVideo(player2,startSecsVid2,endSecsVid2);
 		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
 			player2.pause();
 		}else{
@@ -65,6 +67,7 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 	})
 }
 player2.on('playing',function(){
+	loopVideo(player2,startSecsVid2,endSecsVid2);
 	window.onscroll = function(){
 		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
 			setTimeout(function(){
@@ -92,4 +95,12 @@ function heroVideoResponsive(){
 	}else{
 		Object.assign(heroPoster.style,{animationName:'defaultWidth'})
 	}
+}
+
+function loopVideo(playerElem,startSecs,endSecs){
+	setInterval(function(){
+		if(playerElem.currentTime() > endSecs){
+			playerElem.currentTime(startSecs);
+		}
+	},10)
 }

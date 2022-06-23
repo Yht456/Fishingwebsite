@@ -3,8 +3,10 @@ heroPoster = document.querySelector('.video .heroPoster'),
 techPoster = document.querySelector('.videoSec .video .poster'),
 textVideo = document.querySelector('.textVideo'),
 bottomNav = document.querySelector('.bottomNav'),
-startSecs = 62,
-endSecs = 75;
+startSecsVid1 = 62,
+endSecsVid2 = 75,
+startSecsVid2 = 7,
+endSecsVid2 = 15;
 
 var player = videojs('heroVideoBg',{
 	muted:true,
@@ -71,8 +73,8 @@ player2.on('playing',function(){
 			player2.play();
 		}
 	}
-	if(player2.currentTime() < startSecs){
-		player2.currentTime(startSecs);
+	if(player2.currentTime() < startSecsVid2){
+		player2.currentTime(startSecsVid2);
 	}
 	player2.on('ended',function(){
 		player2.play();

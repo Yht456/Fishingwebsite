@@ -13,6 +13,7 @@ var player = videojs('heroVideoBg',{
 	controls:0,
 });
 player.on('playing',function(){
+	console.clear();
 	if(player.currentTime() < startSecsVid1){
 		player.currentTime(startSecsVid1);
 	}
@@ -47,6 +48,7 @@ let player2 = videojs('techVideoBg',{
 });
 if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){
 	player2.on('playing',function(){
+		console.clear();
 		loopVideo(player2,startSecsVid2,endSecsVid2);
 		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height > 0.5){
 			player2.pause();
@@ -67,6 +69,7 @@ if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTo
 	})
 }
 player2.on('playing',function(){
+	console.clear();
 	loopVideo(player2,startSecsVid2,endSecsVid2);
 	window.onscroll = function(){
 		if(Math.abs(window.scrollY - document.querySelector('.videoSec .video').offsetTop) / document.querySelector('.videoSec .video').getBoundingClientRect().height < 0.5){

@@ -981,7 +981,8 @@ footer .footerBottom a{
 }
 @media screen and (max-width: 850px){
 	#heroVideoBg{
-		height: 124%;
+		height: 121%;
+		transform: scale(1.55);
 	}
 }
 @media screen and (max-width: 800px){
@@ -1270,12 +1271,12 @@ footer .footerBottom a{
 @media screen and (max-width: 650px){
 	#heroVideoBg{
 		height: 127%;
-		transform: scale(1.65);
+		transform: scale(1.67);
 	}
 }
 @media screen and (max-width: 550px){
 	#heroVideoBg{
-		height: 129%;
+		height: 128%;
 	}
 }
 @media screen and (max-width: 500px){

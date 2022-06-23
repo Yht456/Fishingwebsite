@@ -27,7 +27,7 @@ player.on('playing',function(){
 		window.onresize = function(){
 			heroVideoResponsive();
 		}
-	},2000);
+	},3000);
 	player.on('ended',function(){
 		player.play();
 	})

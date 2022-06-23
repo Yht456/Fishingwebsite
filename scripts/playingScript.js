@@ -13,8 +13,8 @@ var player = videojs('heroVideoBg',{
 	controls:0,
 });
 player.on('playing',function(){
-	if(player.currentTime() < startSecs){
-		player.currentTime(startSecs);
+	if(player.currentTime() < startSecsVid1){
+		player.currentTime(startSecsVid1);
 	}
 	setTimeout(function(){
 		heroPosterImg.style.opacity = 0;

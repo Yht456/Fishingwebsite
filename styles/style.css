@@ -569,6 +569,10 @@ section.videoSec{
 	width: 100%;
 	height: 46vw;
 	position: relative;
+	transition:1s ease;
+	-webkit-transition:1s ease;
+	-moz-transition:1s ease;
+	-ms-transition:1s ease;
 }
 .videoSec .textVideo .playBtn{
 	position: absolute;

@@ -32,7 +32,7 @@ html{
 body{
 	margin: 0;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 svg{
 	fill: white;

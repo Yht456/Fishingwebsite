@@ -5,16 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="This is a fishing website">
 	<meta name="keywords" content="fishing, sea, gear, ocean, hunting">
-	<link rel="stylesheet" type="text/css" href="styles/flickity.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/flickity.css">
 	<link rel="stylesheet" href="styles/video-js.min.css" />
+	
 	<link href="styles/style.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="styles/defaults.css">
 	<title>Fishing Website - original posterr</title>
 </head>
 <body>
 	<section class="topSection">
 		<nav>
 			<div class="topNav">
-				<p><img alt="" src="icons/locationIcon.png" class="locationNavBarIcon">Distributor Locations</p>
+				<p><img alt="" src="icons/locationIcon.png" class="locationNavBarIcon"><a href="#" class="borderBottomHoverAnim" style="color:white;">Distributor Locations</a></p>
 				<img alt="" class="logo" src="assets/LOGO.png">
 				<p>
 					<button class="barMenu disabled" onclick="openNav()">
@@ -26,12 +28,12 @@
 			</div>
 			<div class="overlayMenuBar softAnimation" onclick="removeNav()"></div>
 			<ul class="bottomNav">
-				<li><a href="#">hooks</a><button class="xMark softAnimation" onclick="removeNav()"><svg ;xmlns="http://www.w3.org/2000/svg" width="82.763" viewBox="0 0 82.763 82.741"><path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M62.473,52.659,92.033,23.1a6.926,6.926,0,1,0-9.8-9.8l-29.56,29.56L23.118,13.3a6.926,6.926,0,1,0-9.8,9.8l29.56,29.56-29.56,29.56a6.926,6.926,0,0,0,9.8,9.8l29.56-29.56,29.56,29.56a6.926,6.926,0,0,0,9.8-9.8Z" transform="translate(-11.285 -11.289)" class="softAnimation" /></svg></button></li>
+				<li><a href="hooks.php" target="_blank">hooks</a><button class="xMark softAnimation" onclick="removeNav()"><svg ;xmlns="http://www.w3.org/2000/svg" width="82.763" viewBox="0 0 82.763 82.741"><path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M62.473,52.659,92.033,23.1a6.926,6.926,0,1,0-9.8-9.8l-29.56,29.56L23.118,13.3a6.926,6.926,0,1,0-9.8,9.8l29.56,29.56-29.56,29.56a6.926,6.926,0,0,0,9.8,9.8l29.56-29.56,29.56,29.56a6.926,6.926,0,0,0,9.8-9.8Z" transform="translate(-11.285 -11.289)" class="softAnimation" /></svg></button></li>
 				<li><a href="#">apparel</a></li>
 				<li><a href="#">accessories</a></li>
 				<li><a href="#">brand</a></li>
 				<li><a href="#">atheltes</a></li>
-				<li><a href="#">stories</a></li>
+				<li><a href="journalistList.php">stories</a></li>
 			</ul>
 		</nav>
 		<div class="video">
@@ -53,7 +55,7 @@
 		</div>
 		<!-- Rotate it --><hr class="lineTopSection">
 	</section>
-	<section class="catchingProductsGallery">
+	<section class="catchingProductsGallery toReveal">
 		<p class="sectionTitle initial">Ready to make that catch?</p>
 		<div class="gallery">
 			<div class="row firstRow">
@@ -82,9 +84,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="gearSection">
+	<section class="gearSection toReveal">
 		<p class="sectionTitle">Latest Gear</p>
-		<div class="carousel" data-flickity='{"groupCells":"true","freeScroll":"true","wrapAround":"true","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}, "cellAlign": "left"}'>
+		<div class="carousel gearSectionCarousel">
 			<div class="carousel-cell">
 				<a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a>
 				<img alt="Gear product" src="assets/Viper-41_ccexpress.jpg">
@@ -108,11 +110,11 @@
 		</div>
 	</section>
 
-	<section class="videoSec">
+	<section class="videoSec toReveal">
 		<p class="sectionTitle">Bigger, Stronger, Sharper</p>
 		<div class="video">
 			<div class="poster softAnimationLong"></div>
-			<video controls data-setup='{}' id="techVideoBg" class="video-js" autoplay muted>
+			<video controls data-setup='{}' id="techVideoBg" class="video-js" muted>
 				<source src="https://youtube.com/watch?v=nqye02H_H6I?vq=hd1080&controls=0&modestbranding=1&showinfo=0&rel=0&start=7&end=17" type="video/youtube" /> 
 			</video>
 			<video controls data-setup='{}' id="techVideo" class="video-js">
@@ -124,7 +126,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="teamSec">
+	<section class="teamSec toReveal">
 		<p class="sectionTitle initial">Learn from the team</p>
 		<div class="teamContent">
 			<div class="contentText">
@@ -134,7 +136,7 @@
 				<a href="#" class="zoomAnimationLink">start reading</a>
 				<a href="#" class="zoomAnimationLink">join our team</a>
 			</div>
-			<div class="carousel" data-flickity='{"groupCells":"true","freeScroll":"true","cellAlign":"left","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}}'>
+			<div class="carousel teamSectionCarousel">
 				<div class="carousel-cell" style="">
 					<div class="imgSpace"><a href="#" class="overlayCarousel"><p class="insideCellText">Check it</p></a><img alt="an angler is holding a big fish" src="assets/pro-1-wse2.jpg"></div>
 					<p>Name of Fisherman</p>
@@ -163,7 +165,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="socialMediaContent">
+	<section class="socialMediaContent toReveal">
 		<p class="sectionTitle"><a href="#" class="zoomAnimationLink">follow us</a> <span class="initial">on</span> instagram</p>
 		<div class="gallerySocialMedia pcVersion">
 			<div class="row">
@@ -179,7 +181,7 @@
 				<div><img alt="" src="assets/ig-7-img.jpg"></div>
 			</div>
 		</div>
-		<div class="mobileVersion carousel" data-flickity='{"wrapAround":"true","freeScroll":"true","cellAlign":"left","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}}'>
+		<div class="mobileVersion carousel socialMediaContentCarousel" data-flickity='{"wrapAround":"true","freeScroll":"true","cellAlign":"left","arrowShape":{"x0": 10, "x1": 70, "y1": 40, "x2": 70, "y2": 40, "x3": 70}}'>
 			<div class="carousel-cell">
 				<img alt="an angler is holding a big fish" src="assets/ig-top1.jpg">
 			</div>
@@ -206,7 +208,7 @@
 			</div>
 		</div>
 	</section>
-	<footer>
+	<footer class="toReveal">
 		<hr>
 		<p class="footerTitle">Become an official Distributor</p>
 		<hr class="belowLineTitle">	
@@ -292,14 +294,31 @@
 		</div>
 		<hr>
 	</footer>
-	<script type="text/javascript" src="scripts/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="scripts/flickity.pkgd.js"></script>
 	<script src="scripts/video-js.min.js"></script>
 	<script src="scripts/youtube.min.js"></script>
+	<script type="text/javascript" src="scripts/defaults.js"></script>
 	<script type="text/javascript" src="scripts/playingScript.js"></script>
 	<script type="text/javascript">
-		var iframe,
-		playBtns = document.querySelectorAll('.playBtn'),
-		rp = 0,
+		var gearSectionCarousel = new Flickity('.gearSectionCarousel',{
+			groupCells:true,
+			freeScroll:true,
+			wrapAround:true,
+			arrowShape:{x0: 10, x1: 70, y1: 40, x2: 70, y2: 40, x3: 70},
+			cellAlign:'left'
+		}),
+		teamSectionCarousel = new Flickity('.teamSectionCarousel',{
+			groupCells:true,
+			freeScroll:true,
+			cellAlign:'left',
+			arrowShape:{x0: 10, x1: 70, y1: 40, x2: 70, y2: 40, x3: 70}
+		});
+		window.onresize = function(){
+			console.log('resizing')
+			gearSectionCarousel.resize();
+			teamSectionCarousel.resize();
+		}
+		var playBtns = document.querySelectorAll('.playBtn'),
 		showPosterBeucaseOfNav = true,
 		userAgent = navigator.userAgent;
 		if(userAgent.toLowerCase().indexOf('android') > -1 || userAgent.toLowerCase().indexOf('iphone') > -1 || userAgent.toLowerCase().indexOf('ipad') > -1){
@@ -307,57 +326,35 @@
 				showPosterBeucaseOfNav = false;
 			}
 		}
-		window.onload = function(){
-			iframe = document.querySelectorAll('iframe');
+		function playVideos(video, playerFullScreen,index){
+			'use strict';
+			let parent = video.parentElement.parentElement;
+			if(showPosterBeucaseOfNav){
+				Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'defaults'});
+				playerFullScreen.play();
+				playerFullScreen.controls(false);
+			}else{
+				Object.assign(parent.querySelector('.vjs-poster').style,{display:'none'});
+				playerFullScreen.play();
+				playerFullScreen.controls(true);
+			}
+			setTimeout(function(){
+				parent.querySelector('.vjs-fullscreen-control').click();
+				parent.style.display = 'block';
+				parent.style.position ='absolute';
+			},1000)
+			let r = 0;
+			document.addEventListener('fullscreenchange',function(e){
+				r++;
+				if(r >= 2){
+					playerFullScreen.pause();
+					parent.style.display = 'none';
+					r = 0;
+				}
+			})
+			playerFullScreen.on('ended',function(){playerFullScreen.play()});
 		}
-		      function playVideos(video, playerFullScreen,index){
-		      	'use strict';
-		      	/*iframe[index].style.transform = 'scale(1.3)';*/
-		      	let parent = video.parentElement.parentElement;
-		      	if(showPosterBeucaseOfNav){
-		      		Object.assign(parent.querySelector('.vjs-poster').style,{background:'rgba(0,0,0,0)',display:'block',cursor:'default'});
-		      		playerFullScreen.play();
-		      		playerFullScreen.controls(false);
-		      	}else{
-		      		/*iframe[index].style.transform = 'scale(1)';*/
-		      		Object.assign(parent.querySelector('.vjs-poster').style,{display:'none'});
-		      		playerFullScreen.play();
-		      		playerFullScreen.controls(true);
-		      	}
-		      	setTimeout(function(){
-		      		parent.querySelector('.vjs-fullscreen-control').click();
-		      		parent.style.display = 'block';
-		      		parent.style.position ='absolute';
-		      	},1000)
-		      	let r = 0;
-		      	document.addEventListener('fullscreenchange',function(e){
-		      		r++;
-		      		if(r >= 2){
-		      			playerFullScreen.pause();
-		      			parent.style.display = 'none';
-		      			r = 0;
-		      		}
-		      	})
-		      	playerFullScreen.on('ended',function(){playerFullScreen.play()});
-		      }
-		      function hoverImgPlay(img){
-		      	'use strict';
-		      	img.style.transform = 'scale(1.1)';
-		      }
-		      function leaveImgPlay(img){
-		      	'use strict';
-		      	img.style.transform = 'scale(1)';
-		      }
-		      function removeNav(){
-		      	'use strict';
-		      	document.querySelector('.overlayMenuBar').classList.remove('openOverlay');
-		      	document.querySelector('.bottomNav').classList.remove('openBarMobile');
-		      }
-		      function openNav(){
-		      	'use strict';
-		      	document.querySelector('.overlayMenuBar').classList.add('openOverlay');
-		      	document.querySelector('.bottomNav').classList.add('openBarMobile');
-		      }
-		  </script>
-		</body>
-		</html>
+		
+	</script>
+</body>
+</html>

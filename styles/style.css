@@ -153,6 +153,15 @@ section:not(:first-child){
 	-o-transition: all 1s ease-in-out;
 	-ms-transition: all 1s ease-in-out;
 }
+.toReveal{
+    transform:translateY(150px);
+    opacity:0;
+    transition:.3s ease;
+}
+.visible{
+    transform:translateY(0) !important;
+    opacity:1 !important;
+}
 .topSection nav{
 	position: absolute;
 	display: block;
